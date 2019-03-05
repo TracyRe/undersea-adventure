@@ -5,12 +5,15 @@
 #### By Tracy Reith and Maly Phongsavanh
 
 ## Description
-An educational exploration of the sea.
+An animated exploration of the sea with informational interactions.
 
 
 ### Learning Objective
 
 CSS animation with Jquery.
+
+### Target Audience
+* Middle school students
 
 
 

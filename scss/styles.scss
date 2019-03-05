@@ -26,6 +26,29 @@ $bottom-water: #004582;
   max-width: $max-width;
 }
 
+
+
+// KEYFRAMES
+
+@keyframes swim-LR {
+ 0% {
+    transform: translateX(0vw) rotateY(0deg);
+  }
+  45% {
+    transform: translateX(50vw) rotateY(0deg);
+  }
+  50% {
+    transform: translateX(50vw) rotateY(180deg);
+  }
+  95% {
+    transform: translateX(0vw) rotateY(180deg);
+  }
+  100% {
+    transform: translateX(0vw) rotateY(0deg);
+  }
+}
+
+
 // STYLES
 
 * {
@@ -35,4 +58,11 @@ $bottom-water: #004582;
 body {
   background-image: linear-gradient($top-water, $bottom-water);
   height: 100vw;
+}
+
+#big-eye-tuna {
+  @include size(5em, 3em);
+  @include border(1px, white);
+  animation: swim-LR 10s infinite linear;
+
 }
