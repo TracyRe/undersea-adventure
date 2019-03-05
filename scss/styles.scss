@@ -26,27 +26,125 @@ $bottom-water: #004582;
   max-width: $max-width;
 }
 
+@mixin keyframes-animation($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin prefix-property($name, $value) {
+  -webkit-#{$name}: $value;
+          #{$name}: $value;
+}
+
+@mixin swim($start,$end) {
+    @include keyframes-animation(swim-LR) {
+      0%{
+        @include prefix-property(transform,
+        translateY(40px)
+        translateX($start)
+        rotateY(0deg));
+      }
+      10%{
+        @include prefix-property(transform,
+        translateY(-40px)
+        translateX($start + .10vw)
+        rotateY(0deg));
+      }
+      20%{
+        @include prefix-property(transform,
+        translateY(40px)
+        translateX($start + .20vw)
+        rotateY(0deg));
+      }
+      30%{
+        @include prefix-property(transform,
+        translateY(-40px)
+        translateX($start + .30vw)
+        rotateY(0deg));
+      }
+      40% {
+        @include prefix-property(transform,
+        translateY(40px)
+        translateX($start + .40vw)
+        rotateY(0deg));
+      }
+      45% {
+        @include prefix-property(transform,
+        translateX($end)
+        rotateY(0deg));
+      }
+      50% {
+        @include prefix-property(transform,
+        translateX($end)
+        translateY(-20px)
+        rotateY(180deg));
+      }
+      60% {
+        @include prefix-property(transform, translateY(40px) translateX($start + .40vw) rotateY(180deg));
+      }
+      70% {
+        @include prefix-property(transform, translateY(-40px) translateX($start + .30vw) rotateY(180deg));
+      }
+      80% {
+        @include prefix-property(transform, translateY(40px) translateX($start + .20vw) rotateY(180deg));
+      }
+      90% {
+        @include prefix-property(transform, translateY(-40px) translateX($start + .10vw) rotateY(180deg));
+      }
+      95% {
+        @include prefix-property(transform, translateX($start) rotateY(180deg));
+      }
+      100% {
+        @include prefix-property(transform, translateX($start) translateY(20px) rotateY(0deg));
+      }
+    }
+
+  }
+
 
 
 // KEYFRAMES
 
-@keyframes swim-LR {
- 0% {
-    transform: translateX(0vw) rotateY(0deg);
-  }
-  45% {
-    transform: translateX(50vw) rotateY(0deg);
-  }
-  50% {
-    transform: translateX(50vw) rotateY(180deg);
-  }
-  95% {
-    transform: translateX(0vw) rotateY(180deg);
-  }
-  100% {
-    transform: translateX(0vw) rotateY(0deg);
-  }
-}
+    // @keyframes swim-LR {
+    //  0% {
+    //     transform: translateX(0vw) rotateY(0deg);
+    //   }
+    //   45% {
+    //     transform: translateX(50vw) rotateY(0deg);
+    //   }
+    //   50% {
+    //     transform: translateX(50vw) rotateY(180deg);
+    //   }
+    //   95% {
+    //     transform: translateX(0vw) rotateY(180deg);
+    //   }
+    //   100% {
+    //     transform: translateX(0vw) rotateY(0deg);
+    //   }
+    // }
+
+    // @include keyframes-animation(swim-LR) {
+    //   0% {
+    //      @include prefix-property(transform, translateX(0vw) rotateY(0deg));
+    //    }
+    //    45% {
+    //      @include prefix-property(transform, translateX(50vw) rotateY(0deg));
+    //    }
+    //    50% {
+    //      @include prefix-property(transform, translateX(50vw) rotateY(180deg));
+    //    }
+    //    95% {
+    //      @include prefix-property(transform, translateX(0vw) rotateY(180deg));
+    //    }
+    //    100% {
+    //      @include prefix-property(transform, translateX(0vw) rotateY(0deg));
+    //    }
+    // };
+
 
 
 // STYLES
@@ -58,11 +156,37 @@ $bottom-water: #004582;
 body {
   background-image: linear-gradient($top-water, $bottom-water);
   height: 100vw;
+  @include swim(5vw, 70vw);
 }
 
 #big-eye-tuna {
+  position: fixed;
+  top: 15%;
   @include size(5em, 3em);
   @include border(1px, white);
-  animation: swim-LR 10s infinite linear;
+  animation: swim-LR 20s infinite linear;
+}
 
+#pearly-razorfish {
+  position: fixed;
+  top: 50%;
+  @include size(10em, 5em);
+  @include border(1px, pink);
+  animation: swim-LR 25s infinite linear;
+}
+
+#puffer {
+  position: fixed;
+  top: 75%;
+  @include size(4em, 4em);
+  @include border(1px, yellow);
+  animation: swim-LR 40s infinite linear;
+}
+
+#great-white {
+  position: fixed;
+  top: 80%;
+  @include size(25em, 10em);
+  @include border(3px, lightblue);
+  animation: swim-LR 20s infinite linear;
 }
