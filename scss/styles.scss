@@ -1,0 +1,38 @@
+// VARIABLES
+$basefont: Helvetica, sans-serif;
+$textcolor: #074377;
+$contrast-text: #fff;
+$top-water: #77b8ef;
+$bottom-water: #004582;
+
+
+// MIXINS
+@mixin cushion ($padding, $margin){
+  padding: $padding;
+  margin: $margin;
+}
+
+@mixin border($size, $color) {
+  border: $size solid $color;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin min-max-width($min-width, $max-width) {
+  min-width: $min-width;
+  max-width: $max-width;
+}
+
+// STYLES
+
+* {
+  @include cushion(0,0);
+}
+
+body {
+  background-image: linear-gradient($top-water, $bottom-water);
+  height: 100vw;
+}
