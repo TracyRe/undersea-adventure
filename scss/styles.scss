@@ -6,6 +6,7 @@ $top-water: #77b8ef;
 $bottom-water: #004582;
 $box-shadow: 4px 4px 8px rgba(1, 30, 76, .5);
 $card-background: #fff;
+$border-radius: 6px 6px 6px 6px;
 
 
 // MIXINS
@@ -48,12 +49,12 @@ $card-background: #fff;
           #{$name}: $value;
 }
 
-@mixin swim($start,$end) {
+@mixin swim($start, $end) {
     @include keyframes-animation(swim-LR) {
       0% {
         @include prefix-property(transform, translateX($start) rotateY(0deg));
       }
-      45% {
+      49% {
         @include prefix-property(transform, translateX($end) rotateY(0deg));
       }
       50% {
@@ -119,7 +120,7 @@ $card-background: #fff;
     //    }
     // };
 
-@keyframes fade{
+@keyframes fade {
   from {
     opacity: 0;
   }
@@ -127,6 +128,24 @@ $card-background: #fff;
     opacity: 1;
   }
 }
+
+@keyframes shark-swim {
+      0% {
+        @include prefix-property(transform, translateX(0vw) rotateY(0deg));
+      }
+      45% {
+        @include prefix-property(transform, translateX(50vw) rotateY(0deg) perspective(600px));
+      }
+      50% {
+        @include prefix-property(transform, translateX(50vw) rotateY(-180deg));
+      }
+      95% {
+        @include prefix-property(transform, translateX(0vw) rotateY(-180deg) perspective(600px));
+      }
+      100% {
+        @include prefix-property(transform, translateX(0vw) rotateY(0deg));
+      }
+    }
 
 
 
@@ -137,6 +156,7 @@ $card-background: #fff;
 }
 
 body {
+  // width: 100%;
   background-image: linear-gradient($top-water, $bottom-water);
   background-repeat: no-repeat;
   height: 500vw;
@@ -157,12 +177,15 @@ p:last-child {
   margin-bottom: 0;
 }
 
-#big-eye-tuna {
+img {
+  // @include size(100%, 100%);
+}
+
+.big-eye-tuna {
   position: relative;
   transform: rotateY(180deg);
   top: 15%;
-  // @include size(5em, 3em);
-  // @include border(1px, white);
+  @include size(5em, auto);
   // background: lightblue;
   animation: swim-LR 50s infinite linear;
 }
@@ -170,25 +193,23 @@ p:last-child {
 #pearly-razorfish {
   position: relative;
   top: 50%;
-  // @include size(10em, 5em);
-  // @include border(1px, pink);
+  @include size(10em, auto);
   animation: swim-LR 40s infinite linear;
 }
 
 #puffer {
   position: relative;
   top: 75%;
-  // @include size(4em, 4em);
-  // @include border(1px, yellow);
-  animation: swim-LR 30s infinite linear;
+  @include size(4em, auto);
+  animation: swim-LR 17s infinite linear;
 }
 
 #great-white {
   position: relative;
   top: 80%;
-  // @include size(25em, 10em);
-  // @include border(3px, lightblue);
-  animation: swim-LR 7s infinite linear;
+  @include size(25em, auto);
+  animation: swim-LR 20s infinite linear;
+  // transform-origin: center center;
 }
 
 #shelly {
@@ -196,8 +217,7 @@ p:last-child {
   top: 20vw;
   left: 45vw;
   animation: bobbing 1s alternate infinite linear;
-  @include size(10em, 10em);
-  @include border(2px, white);
+  @include size(10em, auto);
 }
 
 #jellyfish {
@@ -205,8 +225,7 @@ p:last-child {
   top: 40vw;
   left: 50vw;
   animation: bobbing 1s alternate infinite linear;
-  // @include size(10em, 10em);
-  // @include border(2px, white);
+  @include size(10em, auto);
 }
 
 #octopus {
@@ -214,27 +233,45 @@ p:last-child {
   top: 60vw;
   left: 25vw;
   animation: bobbing 1s alternate infinite linear;
-  // @include size(10em, 10em);
-  // @include border(2px, white);
+  @include size(10em, auto);
+}
+
+.sea-creature {
+  cursor: pointer;  
+}
+
+.fish-info {
+  display: none;
+}
+
+
+.info-card-container {
+  display: block;
+  @include min-max-height(100px, auto);
+  width: 350px;
+  @include cushion(0, 1rem);
+  z-index: 1000;
 }
 
 .info-card {
+  // opacity: 0;
   display: none;
-  opacity: 0;
   background: $card-background;
   box-shadow: $box-shadow;
   @include min-max-height(100px, 500px);
   width: 350px;
   @include cushion(1rem, 1rem);
   font-family: $basefont;
-  z-index: 1000;
+  border-radius: $border-radius;
+  cursor: pointer;
 }
 
-.fade-in {
-  animation: fade 1s forwards;
-}
-
-.fade-out {
-  animation: fade 1s reverse forwards;
-  display: none;
-}
+//
+// .fade-in {
+//   animation: fade 2s forwards;
+// }
+//
+// .fade-out {
+//   animation: fade 2s reverse forwards;
+//   // display: none;
+// }
