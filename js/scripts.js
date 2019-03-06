@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $("#big-eye-tuna").click(function(){
     $(".info-card").addClass("fade-in");
-    $(".info-card").toggle();
+    $(".info-card").toggle("fade-out");
   })
 
 

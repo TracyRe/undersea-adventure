@@ -121,7 +121,8 @@ p:last-child {
   animation: fade 1s forwards; }
 
 .fade-out {
-  animation: fade 5s reverse forwards;
-  display: none; }
+  animation: fade 1s reverse forwards;
+  display: none;
+  background-color: red; }
 
 /*# sourceMappingURL=styles.css.map */

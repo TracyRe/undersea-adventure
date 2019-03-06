@@ -215,6 +215,7 @@ p:last-child {
 }
 
 .fade-out {
-  animation: fade 5s reverse forwards;
+  animation: fade 1s reverse forwards;
   display: none;
+  background-color: red;
 }
