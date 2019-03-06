@@ -4,6 +4,8 @@ $textcolor: #074377;
 $contrast-text: #fff;
 $top-water: #77b8ef;
 $bottom-water: #004582;
+$box-shadow: 4px 4px 8px rgba(1, 30, 76, .5);
+$card-background: #fff;
 
 
 // MIXINS
@@ -25,6 +27,12 @@ $bottom-water: #004582;
   min-width: $min-width;
   max-width: $max-width;
 }
+
+@mixin min-max-height($min-height, $max-height) {
+  min-height: $min-height;
+  max-height: $max-height;
+}
+
 
 @mixin keyframes-animation($name) {
   @-webkit-keyframes #{$name} {
@@ -111,6 +119,15 @@ $bottom-water: #004582;
     //    }
     // };
 
+@keyframes fade{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
 
 // STYLES
@@ -126,12 +143,26 @@ body {
     @include bob;
 }
 
+h1, h2 {
+  margin-bottom: .5rem;
+}
+
+p {
+  line-height: 140%;
+  margin-bottom: 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
 #big-eye-tuna {
-  position: fixed;
+  position: relative;
   top: 15%;
   @include size(5em, 3em);
   @include border(1px, white);
-  animation: swim-LR 10s infinite linear;
+  background: lightblue;
+  animation: swim-LR 50s infinite linear;
 }
 
 #pearly-razorfish {
@@ -165,4 +196,25 @@ body {
   animation: bobbing 1s alternate infinite linear;
   @include size(10em, 10em);
   @include border(2px, white);
+}
+
+.info-card {
+  display: none;
+  opacity: 0;
+  background: $card-background;
+  box-shadow: $box-shadow;
+  @include min-max-height(100px, 500px);
+  width: 350px;
+  @include cushion(1rem, 1rem);
+  font-family: $basefont;
+  z-index: 1000;
+}
+
+.fade-in {
+  animation: fade 1s forwards;
+}
+
+.fade-out {
+  animation: fade 5s reverse forwards;
+  display: none;
 }

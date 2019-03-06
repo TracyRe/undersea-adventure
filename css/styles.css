@@ -1,3 +1,8 @@
+@keyframes fade {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 * {
   padding: 0;
   margin: 0; }
@@ -47,13 +52,24 @@ body {
     transform: translateY(20px); }
   to {
     transform: translateY(-20px); } }
+h1, h2 {
+  margin-bottom: .5rem; }
+
+p {
+  line-height: 140%;
+  margin-bottom: 1rem; }
+
+p:last-child {
+  margin-bottom: 0; }
+
 #big-eye-tuna {
-  position: fixed;
+  position: relative;
   top: 15%;
   width: 5em;
   height: 3em;
   border: 1px solid white;
-  animation: swim-LR 10s infinite linear; }
+  background: lightblue;
+  animation: swim-LR 50s infinite linear; }
 
 #pearly-razorfish {
   position: fixed;
@@ -87,5 +103,25 @@ body {
   width: 10em;
   height: 10em;
   border: 2px solid white; }
+
+.info-card {
+  display: none;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 4px 4px 8px rgba(1, 30, 76, 0.5);
+  min-height: 100px;
+  max-height: 500px;
+  width: 350px;
+  padding: 1rem;
+  margin: 1rem;
+  font-family: Helvetica, sans-serif;
+  z-index: 1000; }
+
+.fade-in {
+  animation: fade 1s forwards; }
+
+.fade-out {
+  animation: fade 5s reverse forwards;
+  display: none; }
 
 /*# sourceMappingURL=styles.css.map */
