@@ -16,7 +16,6 @@ body {
   background-repeat: no-repeat;
   height: 500vw;
 }
-
 @-webkit-keyframes swim-LR {
   0% {
     -webkit-transform: translateX(5vw) rotateY(0deg);
@@ -77,6 +76,7 @@ body {
     transform: translateY(-20px);
   }
 }
+
 h1, h2 {
   margin-bottom: 0.5rem;
 }
@@ -161,7 +161,5 @@ p:last-child {
   animation: fade 1s reverse forwards;
   display: none;
 }
-
-/*# sourceMappingURL=styles.css.map */
 
 /*# sourceMappingURL=styles.css.map */
