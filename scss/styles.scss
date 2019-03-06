@@ -7,6 +7,7 @@ $bottom-water: #004582;
 $box-shadow: 4px 4px 8px rgba(1, 30, 76, .5);
 $card-background: #fff;
 $border-radius: 6px 6px 6px 6px;
+$sea-depth: 365vh;
 
 
 // MIXINS
@@ -82,43 +83,6 @@ $border-radius: 6px 6px 6px 6px;
   }
 
 
-// KEYFRAMES
-
-    // @keyframes swim-LR {
-    //  0% {
-    //     transform: translateX(0vw) rotateY(0deg);
-    //   }
-    //   45% {
-    //     transform: translateX(50vw) rotateY(0deg);
-    //   }
-    //   50% {
-    //     transform: translateX(50vw) rotateY(180deg);
-    //   }
-    //   95% {
-    //     transform: translateX(0vw) rotateY(180deg);
-    //   }
-    //   100% {
-    //     transform: translateX(0vw) rotateY(0deg);
-    //   }
-    // }
-
-    // @include keyframes-animation(swim-LR) {
-    //   0% {
-    //      @include prefix-property(transform, translateX(0vw) rotateY(0deg));
-    //    }
-    //    45% {
-    //      @include prefix-property(transform, translateX(50vw) rotateY(0deg));
-    //    }
-    //    50% {
-    //      @include prefix-property(transform, translateX(50vw) rotateY(180deg));
-    //    }
-    //    95% {
-    //      @include prefix-property(transform, translateX(0vw) rotateY(180deg));
-    //    }
-    //    100% {
-    //      @include prefix-property(transform, translateX(0vw) rotateY(0deg));
-    //    }
-    // };
 
 @keyframes fade {
   from {
@@ -128,25 +92,6 @@ $border-radius: 6px 6px 6px 6px;
     opacity: 1;
   }
 }
-
-@keyframes shark-swim {
-      0% {
-        @include prefix-property(transform, translateX(0vw) rotateY(0deg));
-      }
-      45% {
-        @include prefix-property(transform, translateX(50vw) rotateY(0deg) perspective(600px));
-      }
-      50% {
-        @include prefix-property(transform, translateX(50vw) rotateY(-180deg));
-      }
-      95% {
-        @include prefix-property(transform, translateX(0vw) rotateY(-180deg) perspective(600px));
-      }
-      100% {
-        @include prefix-property(transform, translateX(0vw) rotateY(0deg));
-      }
-    }
-
 
 
 // STYLES
@@ -159,7 +104,7 @@ body {
   // width: 100%;
   background-image: linear-gradient($top-water, $bottom-water);
   background-repeat: no-repeat;
-  height: 500vw;
+  height: $sea-depth;
     @include swim(5vw, 70vw);
     @include bob;
 }
@@ -178,14 +123,14 @@ p:last-child {
 }
 
 img {
-  // @include size(100%, 100%);
+  @include size(100%, 100%);
 }
 
-.big-eye-tuna {
+#big-eye-tuna {
   position: relative;
   transform: rotateY(180deg);
   top: 15%;
-  @include size(5em, auto);
+  @include size(12em, auto);
   // background: lightblue;
   animation: swim-LR 50s infinite linear;
 }
@@ -193,21 +138,21 @@ img {
 #pearly-razorfish {
   position: relative;
   top: 50%;
-  @include size(10em, auto);
+  @include size(6em, auto);
   animation: swim-LR 40s infinite linear;
 }
 
 #puffer {
   position: relative;
   top: 75%;
-  @include size(4em, auto);
+  @include size(6em, auto);
   animation: swim-LR 17s infinite linear;
 }
 
 #great-white {
   position: relative;
   top: 80%;
-  @include size(25em, auto);
+  @include size(40em, auto);
   animation: swim-LR 20s infinite linear;
   // transform-origin: center center;
 }
@@ -225,7 +170,7 @@ img {
   top: 40vw;
   left: 50vw;
   animation: bobbing 1s alternate infinite linear;
-  @include size(10em, auto);
+  @include size(8em, auto);
 }
 
 #octopus {
@@ -233,11 +178,49 @@ img {
   top: 60vw;
   left: 25vw;
   animation: bobbing 1s alternate infinite linear;
-  @include size(10em, auto);
+  @include size(40em, auto);
+}
+
+.depth {
+  position: relative;
+  left: 20px;
+  top: 0px;
+  width: auto;
+  z-index: 100;
+}
+
+.depth-line {
+  @include size(5px, $sea-depth);
+  background-image: linear-gradient(black, white);
+  position: absolute;
+  left: 20px;
+}
+
+.depth-indicator {
+  position: fixed;
+  left: 20px;
+  height: 50vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: $basefont;
+  font-weight: bold;
+  color: white;
+  z-index: 200;
+  .depth-marker {
+    @include size(2em, 2em);
+    @include border(5px, red);
+    border-radius: 50%;
+    margin-right: .5rem;
+  }
+  .depth-text {
+    font-size: 1.5rem;
+  }
 }
 
 .sea-creature {
-  cursor: pointer;  
+  cursor: pointer;
 }
 
 .fish-info {
@@ -246,6 +229,8 @@ img {
 
 
 .info-card-container {
+  position: fixed;
+  top: 33%;
   display: block;
   @include min-max-height(100px, auto);
   width: 350px;

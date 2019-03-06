@@ -4,27 +4,42 @@
     <link rel="stylesheet" href="./css/styles.css" type="text/css" media="all">
     <script type="text/javascript" src="./js/jquery-3.3.1.min.js">
     </script>
+    <script src="js/ScrollMagic.min.js"></script>
     <script type="text/javascript" src="./js/scripts.js">
     </script>
     <meta charset="utf-8">
     <title>Undersea Adventure</title>
   </head>
   <body>
+    <div id="trigger"></div>
 
-      <div class="big-eye-tuna sea-creature">
+      <div class="depth">
+        <div class="depth-line"> </div>
+
+      </div>
+      <div class="depth-indicator">
+        <div class="depth-marker"></div>
+        <span class="depth-text">0m</span>
+
+      </div>
+
+      <div id="big-eye-tuna" class="sea-creature">
         <img src="img/big-eye-tuna.png" alt="Big Eye Tuna" title="Big Eye Tuna">
       </div>
-      <div id="pearly-razorfish">
+
+      <div id="pearly-razorfish" class="sea-creature">
         <img src="img/pearly-razorfish.png" alt="Pearly Razorfish" title="Pearly Razorfish">
       </div>
-      <div id="puffer">
+
+      <div id="puffer" class="sea-creature">
         <img src="img/puffer_fish.png" alt="Puffer Fish" title="Puffer Fish">
       </div>
-      <div id="great-white">
+
+      <div id="great-white" class="sea-creature">
         <img src="img/great-white.png" alt="Great White Shark" title="Great White Shark">
       </div>
 
-      <div id="shelly">
+      <div id="shelly" class="sea-creature">
         Shellfish
       </div>
 
