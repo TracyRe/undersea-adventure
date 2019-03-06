@@ -9,7 +9,8 @@
 
 body {
   background-image: linear-gradient(#77b8ef, #004582);
-  height: 100vw; }
+  background-repeat: no-repeat;
+  height: 500vw; }
 @-webkit-keyframes swim-LR {
   0% {
     -webkit-transform: translateX(5vw) rotateY(0deg);
@@ -72,7 +73,7 @@ p:last-child {
   animation: swim-LR 50s infinite linear; }
 
 #pearly-razorfish {
-  position: fixed;
+  position: relative;
   top: 50%;
   width: 10em;
   height: 5em;
@@ -80,7 +81,7 @@ p:last-child {
   animation: swim-LR 5s infinite linear; }
 
 #puffer {
-  position: fixed;
+  position: relative;
   top: 75%;
   width: 4em;
   height: 4em;
@@ -88,7 +89,7 @@ p:last-child {
   animation: swim-LR 19s infinite linear; }
 
 #great-white {
-  position: fixed;
+  position: relative;
   top: 80%;
   width: 25em;
   height: 10em;
@@ -96,7 +97,7 @@ p:last-child {
   animation: swim-LR 7s infinite linear; }
 
 #shelly {
-  position: fixed;
+  position: relative;
   top: 20vw;
   left: 45vw;
   animation: bobbing 1s alternate infinite linear;
@@ -122,7 +123,6 @@ p:last-child {
 
 .fade-out {
   animation: fade 1s reverse forwards;
-  display: none;
-  background-color: red; }
+  display: none; }
 
 /*# sourceMappingURL=styles.css.map */

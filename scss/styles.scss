@@ -138,7 +138,8 @@ $card-background: #fff;
 
 body {
   background-image: linear-gradient($top-water, $bottom-water);
-  height: 100vw;
+  background-repeat: no-repeat;
+  height: 500vw;
     @include swim(5vw, 70vw);
     @include bob;
 }
@@ -166,7 +167,7 @@ p:last-child {
 }
 
 #pearly-razorfish {
-  position: fixed;
+  position: relative;
   top: 50%;
   @include size(10em, 5em);
   @include border(1px, pink);
@@ -174,7 +175,7 @@ p:last-child {
 }
 
 #puffer {
-  position: fixed;
+  position: relative;
   top: 75%;
   @include size(4em, 4em);
   @include border(1px, yellow);
@@ -182,7 +183,7 @@ p:last-child {
 }
 
 #great-white {
-  position: fixed;
+  position: relative;
   top: 80%;
   @include size(25em, 10em);
   @include border(3px, lightblue);
@@ -190,7 +191,7 @@ p:last-child {
 }
 
 #shelly {
-  position: fixed;
+  position: relative;
   top: 20vw;
   left: 45vw;
   animation: bobbing 1s alternate infinite linear;
@@ -217,5 +218,4 @@ p:last-child {
 .fade-out {
   animation: fade 1s reverse forwards;
   display: none;
-  background-color: red;
 }
