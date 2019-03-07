@@ -1,100 +1,6 @@
-// VARIABLES
-$basefont: Helvetica, sans-serif;
-$textcolor: #074377;
-$contrast-text: #fff;
-$top-water: #77b8ef;
-$bottom-water: #004582;
-$box-shadow: 4px 4px 8px rgba(1, 30, 76, .5);
-$card-background: #fff;
-$border-radius: 6px 6px 6px 6px;
-$sea-depth: 365vh;
+@import 'variables';
+@import 'mixins';
 
-
-// MIXINS
-@mixin cushion ($padding, $margin){
-  padding: $padding;
-  margin: $margin;
-}
-
-@mixin border($size, $color) {
-  border: $size solid $color;
-}
-
-@mixin size($width, $height) {
-  width: $width;
-  height: $height;
-}
-
-@mixin min-max-width($min-width, $max-width) {
-  min-width: $min-width;
-  max-width: $max-width;
-}
-
-@mixin min-max-height($min-height, $max-height) {
-  min-height: $min-height;
-  max-height: $max-height;
-}
-
-
-@mixin keyframes-animation($name) {
-  @-webkit-keyframes #{$name} {
-    @content;
-  }
-  @keyframes #{$name} {
-    @content;
-  }
-}
-
-@mixin prefix-property($name, $value) {
-  -webkit-#{$name}: $value;
-          #{$name}: $value;
-}
-
-@mixin swim($start, $end) {
-    @include keyframes-animation(swim-LR) {
-      0% {
-        @include prefix-property(transform, translateX($start) rotateY(0deg));
-      }
-      49% {
-        @include prefix-property(transform, translateX($end) rotateY(0deg));
-      }
-      50% {
-        @include prefix-property(transform, translateX($end) rotateY(180deg));
-      }
-      99% {
-        @include prefix-property(transform, translateX($start) rotateY(180deg));
-      }
-      100% {
-        @include prefix-property(transform, translateX($start) rotateY(0deg));
-      }
-    }
-
-  }
-
-  @mixin bob {
-    @include keyframes-animation (bobbing) {
-      from {
-        transform: translateY(20px);
-      }
-      to {
-        transform: translateY(-20px);
-      }
-    }
-  }
-
-
-
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-
-// STYLES
 
 * {
   @include cushion(0,0);
@@ -105,8 +11,8 @@ body {
   background-image: linear-gradient($top-water, $bottom-water);
   background-repeat: no-repeat;
   height: $sea-depth;
-    @include swim(5vw, 70vw);
-    @include bob;
+  @include swim(5vw, 70vw);
+  @include bob;
 }
 
 h1, h2 {
@@ -123,62 +29,60 @@ p:last-child {
 }
 
 img {
-  @include size(100%, 100%);
+  @include size(100%);
 }
 
 #big-eye-tuna {
+  @include size(12em);
   position: relative;
   transform: rotateY(180deg);
   top: 15%;
-  @include size(12em, auto);
-  // background: lightblue;
   animation: swim-LR 50s infinite linear;
 }
 
-#pearly-razorfish {
+#razorfish {
+  @include size(6em);
   position: relative;
   top: 50%;
-  @include size(6em, auto);
   animation: swim-LR 40s infinite linear;
 }
 
 #puffer {
+  @include size(6em);
   position: relative;
   top: 75%;
-  @include size(6em, auto);
   animation: swim-LR 17s infinite linear;
 }
 
 #great-white {
+  @include size(40em);
   position: relative;
   top: 80%;
-  @include size(40em, auto);
   animation: swim-LR 20s infinite linear;
-  // transform-origin: center center;
 }
 
 #shelly {
+  @include size(10em);
   position: relative;
   top: 20vw;
   left: 45vw;
   animation: bobbing 1s alternate infinite linear;
-  @include size(10em, auto);
 }
 
 #jellyfish {
+  @include size(8em);
   position: relative;
   top: 40vw;
   left: 50vw;
   animation: bobbing 1s alternate infinite linear;
-  @include size(8em, auto);
 }
 
 #octopus {
+  @include size(40em);
   position: relative;
   top: 60vw;
   left: 25vw;
   animation: bobbing 1s alternate infinite linear;
-  @include size(40em, auto);
 }
 
 .depth {
@@ -190,7 +94,8 @@ img {
 }
 
 .depth-line {
-  @include size(5px, $sea-depth);
+  @include size(5px);
+  height: $sea-depth;
   background-image: linear-gradient(black, white);
   position: absolute;
   left: 20px;
@@ -209,7 +114,8 @@ img {
   color: white;
   z-index: 200;
   .depth-marker {
-    @include size(2em, 2em);
+    width: 2em;
+    height: 2em;
     @include border(5px, red);
     border-radius: 50%;
     margin-right: .5rem;
@@ -229,34 +135,23 @@ img {
 
 
 .info-card-container {
+  @include min-max-height(100px, auto);
+  @include cushion(0, 1rem);
   position: fixed;
   top: 33%;
   display: block;
-  @include min-max-height(100px, auto);
   width: 350px;
-  @include cushion(0, 1rem);
   z-index: 1000;
 }
 
 .info-card {
-  // opacity: 0;
+  @include min-max-height(100px, 500px);
+  @include cushion(1rem, 1rem);
   display: none;
   background: $card-background;
   box-shadow: $box-shadow;
-  @include min-max-height(100px, 500px);
   width: 350px;
-  @include cushion(1rem, 1rem);
   font-family: $basefont;
   border-radius: $border-radius;
   cursor: pointer;
 }
-
-//
-// .fade-in {
-//   animation: fade 2s forwards;
-// }
-//
-// .fade-out {
-//   animation: fade 2s reverse forwards;
-//   // display: none;
-// }
