@@ -1,3 +1,8 @@
+
+
+
+
+
 $(document).ready(function() {
   var scroll = $(document).height();
 
@@ -69,4 +74,11 @@ $(document).ready(function() {
       $(".depth-text").text("100 m");
     }
   });
+
+
+
+  $( ".sea-creature").click( function(event) {
+    $(".info-card-container").css( {position:"absolute", top:event.pageY, left: event.pageX});
+  });
+
 });

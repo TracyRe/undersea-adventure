@@ -17,6 +17,22 @@
   100% {
     opacity: .1;
     transform: translateY(-500px); } }
+@keyframes wobble {
+  0% {
+    transform: rotateZ(0deg); }
+  25% {
+    transform: rotateZ(10deg); }
+  50% {
+    transform: rotateZ(0deg); }
+  75% {
+    transform: rotateZ(-10deg); }
+  100% {
+    transform: rotateZ(0deg); } }
+@keyframes scaling {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1); } }
 #bubble-1 {
   grid-area: 10/ 4;
   width: 2em;
@@ -254,6 +270,7 @@ h1, h2 {
   margin-bottom: .5rem; }
 
 p {
+  font-family: Helvetica, sans-serif;
   line-height: 140%;
   margin-bottom: 1rem; }
 
@@ -264,12 +281,28 @@ img {
   width: 100%;
   height: auto; }
 
-h1 {
-  font-family: "Princess Sofia", cursive;
-  font-size: 10rem;
-  color: yellow;
-  text-align: center;
-  text-shadow: 4px 4px 8px rgba(1, 30, 76, 0.5); }
+.header {
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  width: 100%; }
+  .header h1 {
+    font-family: "Princess Sofia", cursive;
+    font-size: 10rem;
+    color: yellow;
+    text-align: center;
+    text-shadow: 4px 4px 8px rgba(1, 30, 76, 0.5); }
+  .header .intro {
+    background: white;
+    opacity: .4;
+    padding: 0.7rem 2rem;
+    margin: 0 auto 1rem auto;
+    animation: wobble .6s linear;
+    animation-iteration-count: 2; }
+    .header .intro p {
+      animation: scaling 1.2s linear;
+      font-size: 1.2rem;
+      text-align: center; }
 
 #big-eye-tuna {
   width: 12em;
@@ -291,7 +324,7 @@ h1 {
   height: auto;
   position: relative;
   top: 8%;
-  animation: swim-LR 17s infinite linear, sea-through 2s linear; }
+  animation: swim-LR 23s infinite linear, sea-through 2s linear; }
 
 #great-white {
   width: 40em;
@@ -319,7 +352,7 @@ h1 {
   width: 8em;
   height: auto;
   position: relative;
-  top: 83%;
+  top: 79%;
   animation: swim-RL 18s infinite linear, sea-through 2s linear; }
 
 #octopus {
@@ -377,8 +410,6 @@ h1 {
   max-height: auto;
   padding: 0;
   margin: 1rem;
-  position: fixed;
-  top: 33%;
   display: block;
   width: 350px;
   z-index: 1000; }
