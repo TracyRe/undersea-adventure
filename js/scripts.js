@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 
   var scroll = $(document).height();
-  // console.log(scroll);
+  console.log(scroll);
 
   $("#big-eye-tuna").click(function(){
     $(".info-card").children().hide()
@@ -14,7 +14,7 @@ $(document).ready(function() {
     $(".info-card").fadeIn(600);
     $("#info-jellyfish").show();
   });
-  });
+
   $("#sea-turtle").click(function(){
     $(".info-card").children().hide()
     $(".info-card").fadeIn(600);
@@ -67,25 +67,40 @@ $(document).ready(function() {
 
     if ( meters > 2900 ) {
       $(".depth-text").text("3000 m");
-      // $(".depth-indicator").addClass("three-thousand");
     } else if ( meters > 2500 ) {
       $(".depth-text").text("2500 m");
-      // $(".depth-indicator").addClass("twenty-five");
     } else if ( meters > 2100 ) {
       $(".depth-text").text("2000 m");
-      // $(".depth-indicator").addClass("two-thousand");
     } else if ( meters > 1700 ) {
       $(".depth-text").text("1500 m");
-      // $(".depth-indicator").addClass("fifteen-hundred");
     } else if ( meters > 1400 ) {
       $(".depth-text").text("1000 m");
-      // $(".depth-indicator").addClass("thousand");
     } else if ( meters > 1000 ) {
       $(".depth-text").text("500 m");
-      // $(".depth-indicator").addClass("five-hundred");
     } else {
       $(".depth-text").text("100 m");
     }
+
+    console.log(meters, e.progress);
+
   });
 
-});
+  });
+
+
+  // $(".depth-indicator").addClass("three-thousand");
+
+
+  // $(".depth-indicator").addClass("twenty-five");
+
+
+  // $(".depth-indicator").addClass("two-thousand");
+
+
+  // $(".depth-indicator").addClass("fifteen-hundred");
+
+
+  // $(".depth-indicator").addClass("thousand");
+
+
+  // $(".depth-indicator").addClass("five-hundred");
