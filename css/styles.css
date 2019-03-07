@@ -1,3 +1,8 @@
+@keyframes sea-through {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 @keyframes fade {
   from {
     opacity: 0; }
@@ -161,7 +166,7 @@
   margin: 0; }
 
 body {
-  background-image: linear-gradient(#77b8ef, #004582);
+  background-image: linear-gradient(#b5e8ff, #001c2b);
   background-repeat: no-repeat;
   height: 365vh; }
 @-webkit-keyframes swim-LR {
@@ -238,6 +243,13 @@ body {
     transform: translateY(20px); }
   to {
     transform: translateY(-20px); } }
+.container {
+  background-image: url(../img/bg-ocean-floor.png);
+  background-attachment: absolute;
+  background-position: bottom;
+  background-repeat: repeat-x;
+  height: 365vh; }
+
 h1, h2 {
   margin-bottom: .5rem; }
 
@@ -252,41 +264,48 @@ img {
   width: 100%;
   height: auto; }
 
+h1 {
+  font-family: "Princess Sofia", cursive;
+  font-size: 10rem;
+  color: yellow;
+  text-align: center;
+  text-shadow: 4px 4px 8px rgba(1, 30, 76, 0.5); }
+
 #big-eye-tuna {
   width: 12em;
   height: auto;
   position: relative;
   transform: rotateY(180deg);
   top: 5.4%;
-  animation: swim-LR 50s infinite linear; }
+  animation: swim-LR 50s infinite linear, sea-through 2s linear; }
 
 #razorfish {
   width: 6em;
   height: auto;
   position: relative;
   top: 2.7%;
-  animation: swim-LR 40s infinite linear; }
+  animation: swim-LR 40s infinite linear, sea-through 2s linear; }
 
 #puffer {
   width: 6em;
   height: auto;
   position: relative;
   top: 8%;
-  animation: swim-LR 17s infinite linear; }
+  animation: swim-LR 17s infinite linear, sea-through 2s linear; }
 
 #great-white {
   width: 40em;
   height: auto;
   position: relative;
   top: 27%;
-  animation: swim-RL 20s infinite linear; }
+  animation: swim-RL 20s infinite linear, sea-through 2s linear; }
 
 #sea-turtle {
   width: 20em;
   height: auto;
   position: relative;
   top: 5.4%;
-  animation: swim-RL 15s infinite linear; }
+  animation: swim-RL 15s infinite linear, sea-through 2s linear; }
 
 #jellyfish {
   width: 8em;
@@ -294,14 +313,14 @@ img {
   position: relative;
   top: 27%;
   left: 50vw;
-  animation: bobbing 1s alternate infinite linear; }
+  animation: bobbing 1s alternate infinite linear, sea-through 2s linear; }
 
 #angler-fish {
   width: 8em;
   height: auto;
   position: relative;
   top: 83%;
-  animation: swim-RL 18s infinite linear; }
+  animation: swim-RL 18s infinite linear, sea-through 2s linear; }
 
 #octopus {
   width: 40em;
@@ -309,7 +328,7 @@ img {
   position: relative;
   top: 54%;
   left: 25vw;
-  animation: bobbing 1s alternate infinite linear; }
+  animation: bobbing 1s alternate infinite linear, sea-through 2s linear; }
 
 .depth {
   position: relative;
@@ -344,7 +363,8 @@ img {
     border: 5px solid red;
     border-radius: 50%; }
   .depth-indicator .depth-text {
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    margin-left: .5rem; }
 
 .sea-creature {
   cursor: pointer; }

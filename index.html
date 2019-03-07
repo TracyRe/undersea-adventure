@@ -2,6 +2,7 @@
 <html>
 <head>
   <link rel="stylesheet" href="./css/styles.css" type="text/css" media="all">
+  <link href="https://fonts.googleapis.com/css?family=Princess+Sofia" rel="stylesheet">
   <script type="text/javascript" src="./js/jquery-3.3.1.min.js">
   </script>
   <script src="js/ScrollMagic.min.js"></script>
@@ -11,123 +12,128 @@
   <title>Undersea Adventure</title>
 </head>
 <body>
+  <div class="container">
 
 
-  <div class="bubbles-container">
-    <p id="bubble-1"></p>
-    <p id="bubble-2"></p>
-    <p id="bubble-3"></p>
-    <p id="bubble-4"></p>
-    <p id="bubble-5"></p>
-    <p id="bubble-6"></p>
-    <p id="bubble-7"></p>
-    <p id="bubble-8"></p>
-    <p id="bubble-9"></p>
-    <p id="bubble-10"></p>
-    <p id="bubble-11"></p>
-    <p id="bubble-12"></p>
-    <p id="bubble-13"></p>
-    <p id="bubble-14"></p>
-    <p id="bubble-15"></p>
-    <p id="bubble-16"></p>
-  </div>
 
 
-  <div id="trigger"></div>
-  <div class="depth">
-    <div class="depth-line"></div>
-
-  </div>
-  <div class="depth-indicator">
-    <div class="depth-marker"></div>
-    <span class="depth-text"></span>
-
-  </div>
-
-  <div id="big-eye-tuna" class="sea-creature">
-    <img src="img/big-eye-tuna.png" alt="Big Eye Tuna" title="Big Eye Tuna">
-  </div>
-
-  <div id="razorfish" class="sea-creature">
-    <img src="img/pearly-razorfish.png" alt="Pearly Razorfish" title="Pearly Razorfish">
-  </div>
-
-  <div id="puffer" class="sea-creature">
-    <img src="img/puffer-fish.png" alt="Puffer Fish" title="Puffer Fish">
-  </div>
-
-  <div id="great-white" class="sea-creature">
-    <img src="img/great-white.png" alt="Great White Shark" title="Great White Shark">
-  </div>
-
-  <div id="angler-fish" class="sea-creature">
-    <img src="img/anglerfish.png" alt="Angler Fish" title="Angler Fish">
-  </div>
-
-  <div id="sea-turtle" class="sea-creature">
-    <img src="img/sea-turtle.png" alt="Sea Turtle" title="Sea Turtle">
-  </div>
-
-  <div id="jellyfish" class="sea-creature">
-    <img src="img/jellyfish.png" alt="Jellyfish" title="Jellyfish">
-  </div>
-
-  <div id="octopus" class="sea-creature">
-    <img src="img/octopus.png" alt="">
-  </div>
-
-  <div class="info-card-container">
-    <div class="info-card">
-      <div id="info-tuna" class="fish-info">
-        <h2>Big Eye Tuna</h2>
-        <p>Bigeye tuna can grow up to 250 centimetre (98 inches) or 8 feet, in length. Maximum weight of individuals probably exceeds 180 kg (400 lb), with the all-tackle angling record standing at 178 kg (392 lb). They are large, deep-bodied, streamlined fish with large heads and eyes. The pectoral fins are very long, reaching back beyond the start of the second dorsal fin in juveniles and the space between the first and second dorsal fin in adults. They have 13 or 14 dorsal spines.</p>
-        <a href="https://en.wikipedia.org/wiki/Bigeye_tuna">More Information</a>
-      </div> <!-- *** END INFO-TUNA *** -->
-
-      <div id="info-sea-turtle" class="fish-info">
-        <h2>Sea Turtle</h2>
-        <p>The majority of a sea turtle's body is protected by its shell. The turtle's shell is divided into two sections: the carapace (the dorsal portion) and the plastron (the ventral portion). The shell is made up of smaller plates called scutes. The leatherback is the only sea turtle that does not have a hard shell. Instead, it bears a mosaic of bony plates beneath its leathery skin.</p>
-        <a href="https://en.wikipedia.org/wiki/Sea_turtle">More Information</a>
-      </div> <!-- *** END INFO-TUNA *** -->
-
-      <div id="info-jellyfish" class="fish-info">
-        <h2>Jellyfish</h2>
-        <p>Jellyfish or sea jellies are the informal common names given to the medusa-phase of certain gelatinous members of the subphylum Medusozoa, a major part of the phylum Cnidaria. Jellyfish are mainly free-swimming marine animals with umbrella-shaped bells and trailing tentacles, although a few are not mobile, being anchored to the seabed by stalks. The bell can pulsate to provide propulsion and highly efficient locomotion. The tentacles are armed with stinging cells and may be used to capture prey and defend against predators. Jellyfish have a complex life cycle; the medusa is normally the sexual phase, the planula larva can disperse widely and is followed by a sedentary polyp phase.</p>
-        <a href="https://en.wikipedia.org/wiki/Jellyfish">More Information</a>
-      </div> <!-- *** END INFO-JELLYFISH *** -->
-
-      <div id="info-octopus" class="fish-info">
-        <h2>Octopus</h2>
-        <p>The octopus is a soft-bodied, eight-limbed mollusc of the order Octopoda. Around 300 species are recognised, and the order is grouped within the class Cephalopoda with squids, cuttlefish, and nautiloids. Like other cephalopods, the octopus is bilaterally symmetric with two eyes and a beak, with its mouth at the center point of the eight limbs (traditionally called "arms", sometimes mistakenly called "tentacles"). The soft body can rapidly alter its shape, enabling octopuses to squeeze through small gaps. They trail their eight appendages behind them as they swim. The siphon is used both for respiration and for locomotion, by expelling a jet of water. Octopuses have a complex nervous system and excellent sight, and are among the most intelligent and behaviourally diverse of all invertebrates.</p>
-        <a href="https://en.wikipedia.org/wiki/Octopus">More Information</a>
-      </div> <!-- *** END INFO-OCTOPUS *** -->
-
-      <div id="info-razorfish" class="fish-info">
-        <h2>Pearly Razorfish</h2>
-        <p>Pearly razorfish can reach 38 cm (15 in) in total length, though most do not exceed 20 cm (7.9 in). Its body is elongate and very compressed laterally, the head is flattened, with a steep profile and sharp teeth. Its long dorsal fin extends along most of its back. It has 9 dorsal spines, 12 dorsal soft rays, 3 anal spines and 12 anal soft rays. This wrasse has a yellow-orange or reddish-pink color that is darker on the back and lighter on the belly, sometimes marked with green and gray stripes. Head shows vertical narrow light blue lines and there are scales with brisk reflexes on the abdomen. Upon capture, this fish has been known to turn its mouth and sharp protuding teeth past 90 degrees to either side in relationship to its own body as an attempt to be released from capture.</p>
-        <a href="https://en.wikipedia.org/wiki/Pearly_razorfish">More Information</a>
-      </div> <!-- *** END INFO-RAZORFISH *** -->
-
-      <div id="info-angler-fish" class="fish-info">
-        <h2>Angler Fish</h2>
-        <p>They are typically small to medium in size, although a few species can reach lengths of greater than 100 cm (39 in).</p>
-        <a href="https://en.wikipedia.org/wiki/Anglerfish">More Information</a>
-      </div>
-
-      <div id="info-puffer" class="fish-info">
-        <h2>Puffer Fish</h2>
-        <p>They are typically small to medium in size, although a few species can reach lengths of greater than 100 cm (39 in).</p>
-        <a href="https://en.wikipedia.org/wiki/Tetraodontidae">More Information</a>
-      </div> <!-- *** END INFO-PUFFERFISH *** -->
-
-      <div id="info-great-white" class="fish-info">
-        <h2>Great White Shark</h2>
-        <p>The great white shark (Carcharodon carcharias), also known as the great white, white shark or white pointer, is a species of large mackerel shark which can be found in the coastal surface waters of all the major oceans. The great white shark is notable for its size, with larger female individuals growing to 6.1 m (20 ft) in length and 1,905 kg (4,200 lb) in weight at maturity. However, most are smaller; males measure 3.4 to 4.0 m (11 to 13 ft), and females measure 4.6 to 4.9 m (15 to 16 ft) on average.</p>
-        <a href="https://en.wikipedia.org/wiki/Great_white_shark">More Information</a>
-      </div> <!-- *** END INFO-GREAT WHITE SHARK *** -->
-    </div> <!-- *** END INFO-CARD *** -->
+    <div class="bubbles-container">
+      <p id="bubble-1"></p>
+      <p id="bubble-2"></p>
+      <p id="bubble-3"></p>
+      <p id="bubble-4"></p>
+      <p id="bubble-5"></p>
+      <p id="bubble-6"></p>
+      <p id="bubble-7"></p>
+      <p id="bubble-8"></p>
+      <p id="bubble-9"></p>
+      <p id="bubble-10"></p>
+      <p id="bubble-11"></p>
+      <p id="bubble-12"></p>
+      <p id="bubble-13"></p>
+      <p id="bubble-14"></p>
+      <p id="bubble-15"></p>
+      <p id="bubble-16"></p>
+    </div>
 
 
-  </div> <!-- *** END INFO-CARD-CONTAINER *** -->
+    <div id="trigger"></div>
+    <div class="depth">
+      <div class="depth-line"></div>
+
+    </div>
+    <div class="depth-indicator">
+      <div class="depth-marker"></div>
+      <span class="depth-text"></span>
+    </div>
+
+    <h1>Undersea Adventure</h1>
+
+    <div id="big-eye-tuna" class="sea-creature">
+      <img src="img/big-eye-tuna.png" alt="Big Eye Tuna" title="Big Eye Tuna">
+    </div>
+
+    <div id="razorfish" class="sea-creature">
+      <img src="img/pearly-razorfish.png" alt="Pearly Razorfish" title="Pearly Razorfish">
+    </div>
+
+    <div id="puffer" class="sea-creature">
+      <img src="img/puffer-fish.png" alt="Puffer Fish" title="Puffer Fish">
+    </div>
+
+    <div id="great-white" class="sea-creature">
+      <img src="img/great-white.png" alt="Great White Shark" title="Great White Shark">
+    </div>
+
+    <div id="angler-fish" class="sea-creature">
+      <img src="img/anglerfish.png" alt="Angler Fish" title="Angler Fish">
+    </div>
+
+    <div id="sea-turtle" class="sea-creature">
+      <img src="img/sea-turtle.png" alt="Sea Turtle" title="Sea Turtle">
+    </div>
+
+    <div id="jellyfish" class="sea-creature">
+      <img src="img/jellyfish.png" alt="Jellyfish" title="Jellyfish">
+    </div>
+
+    <div id="octopus" class="sea-creature">
+      <img src="img/octopus.png" alt="">
+    </div>
+
+    <div class="info-card-container">
+      <div class="info-card">
+        <div id="info-tuna" class="fish-info">
+          <h2>Big Eye Tuna</h2>
+          <p>Bigeye tuna can grow up to 250 centimetre (98 inches) or 8 feet, in length. Maximum weight of individuals probably exceeds 180 kg (400 lb), with the all-tackle angling record standing at 178 kg (392 lb). They are large, deep-bodied, streamlined fish with large heads and eyes. The pectoral fins are very long, reaching back beyond the start of the second dorsal fin in juveniles and the space between the first and second dorsal fin in adults. They have 13 or 14 dorsal spines.</p>
+          <a href="https://en.wikipedia.org/wiki/Bigeye_tuna">More Information</a>
+        </div> <!-- *** END INFO-TUNA *** -->
+
+        <div id="info-sea-turtle" class="fish-info">
+          <h2>Sea Turtle</h2>
+          <p>The majority of a sea turtle's body is protected by its shell. The turtle's shell is divided into two sections: the carapace (the dorsal portion) and the plastron (the ventral portion). The shell is made up of smaller plates called scutes. The leatherback is the only sea turtle that does not have a hard shell. Instead, it bears a mosaic of bony plates beneath its leathery skin.</p>
+          <a href="https://en.wikipedia.org/wiki/Sea_turtle">More Information</a>
+        </div> <!-- *** END INFO-TUNA *** -->
+
+        <div id="info-jellyfish" class="fish-info">
+          <h2>Jellyfish</h2>
+          <p>Jellyfish or sea jellies are the informal common names given to the medusa-phase of certain gelatinous members of the subphylum Medusozoa, a major part of the phylum Cnidaria. Jellyfish are mainly free-swimming marine animals with umbrella-shaped bells and trailing tentacles, although a few are not mobile, being anchored to the seabed by stalks. The bell can pulsate to provide propulsion and highly efficient locomotion. The tentacles are armed with stinging cells and may be used to capture prey and defend against predators. Jellyfish have a complex life cycle; the medusa is normally the sexual phase, the planula larva can disperse widely and is followed by a sedentary polyp phase.</p>
+          <a href="https://en.wikipedia.org/wiki/Jellyfish">More Information</a>
+        </div> <!-- *** END INFO-JELLYFISH *** -->
+
+        <div id="info-octopus" class="fish-info">
+          <h2>Octopus</h2>
+          <p>The octopus is a soft-bodied, eight-limbed mollusc of the order Octopoda. Around 300 species are recognised, and the order is grouped within the class Cephalopoda with squids, cuttlefish, and nautiloids. Like other cephalopods, the octopus is bilaterally symmetric with two eyes and a beak, with its mouth at the center point of the eight limbs (traditionally called "arms", sometimes mistakenly called "tentacles"). The soft body can rapidly alter its shape, enabling octopuses to squeeze through small gaps. They trail their eight appendages behind them as they swim. The siphon is used both for respiration and for locomotion, by expelling a jet of water. Octopuses have a complex nervous system and excellent sight, and are among the most intelligent and behaviourally diverse of all invertebrates.</p>
+          <a href="https://en.wikipedia.org/wiki/Octopus">More Information</a>
+        </div> <!-- *** END INFO-OCTOPUS *** -->
+
+        <div id="info-razorfish" class="fish-info">
+          <h2>Pearly Razorfish</h2>
+          <p>Pearly razorfish can reach 38 cm (15 in) in total length, though most do not exceed 20 cm (7.9 in). Its body is elongate and very compressed laterally, the head is flattened, with a steep profile and sharp teeth. Its long dorsal fin extends along most of its back. It has 9 dorsal spines, 12 dorsal soft rays, 3 anal spines and 12 anal soft rays. This wrasse has a yellow-orange or reddish-pink color that is darker on the back and lighter on the belly, sometimes marked with green and gray stripes. Head shows vertical narrow light blue lines and there are scales with brisk reflexes on the abdomen. Upon capture, this fish has been known to turn its mouth and sharp protuding teeth past 90 degrees to either side in relationship to its own body as an attempt to be released from capture.</p>
+          <a href="https://en.wikipedia.org/wiki/Pearly_razorfish">More Information</a>
+        </div> <!-- *** END INFO-RAZORFISH *** -->
+
+        <div id="info-angler-fish" class="fish-info">
+          <h2>Angler Fish</h2>
+          <p>They are typically small to medium in size, although a few species can reach lengths of greater than 100 cm (39 in).</p>
+          <a href="https://en.wikipedia.org/wiki/Anglerfish">More Information</a>
+        </div>
+
+        <div id="info-puffer" class="fish-info">
+          <h2>Puffer Fish</h2>
+          <p>They are typically small to medium in size, although a few species can reach lengths of greater than 100 cm (39 in).</p>
+          <a href="https://en.wikipedia.org/wiki/Tetraodontidae">More Information</a>
+        </div> <!-- *** END INFO-PUFFERFISH *** -->
+
+        <div id="info-great-white" class="fish-info">
+          <h2>Great White Shark</h2>
+          <p>The great white shark (Carcharodon carcharias), also known as the great white, white shark or white pointer, is a species of large mackerel shark which can be found in the coastal surface waters of all the major oceans. The great white shark is notable for its size, with larger female individuals growing to 6.1 m (20 ft) in length and 1,905 kg (4,200 lb) in weight at maturity. However, most are smaller; males measure 3.4 to 4.0 m (11 to 13 ft), and females measure 4.6 to 4.9 m (15 to 16 ft) on average.</p>
+          <a href="https://en.wikipedia.org/wiki/Great_white_shark">More Information</a>
+        </div> <!-- *** END INFO-GREAT WHITE SHARK *** -->
+      </div> <!-- *** END INFO-CARD *** -->
+
+    </div> <!-- *** END INFO-CARD-CONTAINER *** -->
+
+  </div> <!-- *** END CONTAINER - HOLDS BACKGROUND IMAGE OCEAN FLOOR *** -->
 </body>
 </html>

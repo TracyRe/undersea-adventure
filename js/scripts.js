@@ -50,16 +50,6 @@ $(document).ready(function() {
   // build scene
   var scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: scroll })
   .addTo(controller)
-  // .addIndicators() // add indicators (requires plugin)
-  // .on("update", function (e) {
-  // 	$("#scrollDirection").text(e.target.controller().info("scrollDirection"));
-  // })
-  // .on("enter leave", function (e) {
-  // 	$("#state").text(e.type == "enter" ? "inside" : "outside");
-  // })
-  // .on("start end", function (e) {
-  // 	$("#lastHit").text(e.type == "start" ? "top" : "bottom");
-  // })
   .on("progress", function (e) {
     var meters = (e.progress.toFixed(3) * 3688).toFixed(0);
 

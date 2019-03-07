@@ -17,6 +17,14 @@ body {
   @include bob;
 }
 
+.container {
+  background-image: url(../img/bg-ocean-floor.png);
+  background-attachment: absolute;
+  background-position: bottom;
+  background-repeat: repeat-x;
+  height: $sea-depth;
+}
+
 h1, h2 {
   margin-bottom: .5rem;
 }
@@ -34,40 +42,50 @@ img {
   @include size(100%);
 }
 
+h1 {
+  font: {
+    family: $headline-font;
+    size: 10rem;
+  }
+  color: yellow;
+  text-align: center;
+  text-shadow: $box-shadow;
+}
+
 #big-eye-tuna {
   @include size(12em);
   position: relative;
   transform: rotateY(180deg);
   top: 5.4%;
-  animation: swim-LR 50s infinite linear;
+  animation: swim-LR 50s infinite linear, sea-through 2s linear;
 }
 
 #razorfish {
   @include size(6em);
   position: relative;
   top: 2.7%;
-  animation: swim-LR 40s infinite linear;
+  animation: swim-LR 40s infinite linear, sea-through 2s linear;
 }
 
 #puffer {
   @include size(6em);
   position: relative;
   top: 8%;
-  animation: swim-LR 17s infinite linear;
+  animation: swim-LR 17s infinite linear, sea-through 2s linear;
 }
 
 #great-white {
   @include size(40em);
   position: relative;
   top: 27%;
-  animation: swim-RL 20s infinite linear;
+  animation: swim-RL 20s infinite linear, sea-through 2s linear;
 }
 
 #sea-turtle {
   @include size(20em);
   position: relative;
   top: 5.4%;
-  animation: swim-RL 15s infinite linear;
+  animation: swim-RL 15s infinite linear, sea-through 2s linear;
 }
 
 #jellyfish {
@@ -75,14 +93,14 @@ img {
   position: relative;
   top: 27%;
   left: 50vw;
-  animation: bobbing 1s alternate infinite linear;
+  animation: bobbing 1s alternate infinite linear, sea-through 2s linear;
 }
 
 #angler-fish {
   @include size(8em);
   position: relative;
   top: 83%;
-  animation: swim-RL 18s infinite linear;
+  animation: swim-RL 18s infinite linear, sea-through 2s linear;
 }
 
 #octopus {
@@ -90,7 +108,7 @@ img {
   position: relative;
   top: 54%;
   left: 25vw;
-  animation: bobbing 1s alternate infinite linear;
+  animation: bobbing 1s alternate infinite linear, sea-through 2s linear;
 }
 .depth {
   position: relative;
@@ -128,6 +146,7 @@ img {
   }
   .depth-text {
     font-size: 1.5rem;
+    margin-left: .5rem;
   }
 }
 
