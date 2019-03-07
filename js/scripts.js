@@ -5,38 +5,38 @@ $(document).ready(function() {
   console.log(scroll);
 
   $("#big-eye-tuna").click(function(){
-    $(".info-card").children().hide()
+    $(".info-card").children().hide();
     $(".info-card").fadeIn(600);
     $("#info-tuna").show();
   });
   $("#jellyfish").click(function(){
-    $(".info-card").children().hide()
+    $(".info-card").children().hide();
     $(".info-card").fadeIn(600);
     $("#info-jellyfish").show();
   });
 
   $("#sea-turtle").click(function(){
-    $(".info-card").children().hide()
+    $(".info-card").children().hide();
     $(".info-card").fadeIn(600);
     $("#info-sea-turtle").show();
   });
   $("#octopus").click(function(){
-    $(".info-card").children().hide()
+    $(".info-card").children().hide();
     $(".info-card").fadeIn(600);
     $("#info-octopus").show();
   });
   $("#puffer").click(function(){
-    $(".info-card").children().hide()
+    $(".info-card").children().hide();
     $(".info-card").fadeIn(600);
     $("#info-puffer").show();
   });
   $("#razorfish").click(function(){
-    $(".info-card").children().hide()
+    $(".info-card").children().hide();
     $(".info-card").fadeIn(600);
     $("#info-razorfish").show();
   });
   $("#great-white").click(function(){
-    $(".info-card").children().hide()
+    $(".info-card").children().hide();
     $(".info-card").fadeIn(600);
     $("#info-great-white").show();
   });
@@ -81,26 +81,6 @@ $(document).ready(function() {
       $(".depth-text").text("100 m");
     }
 
-    console.log(meters, e.progress);
-
   });
 
   });
-
-
-  // $(".depth-indicator").addClass("three-thousand");
-
-
-  // $(".depth-indicator").addClass("twenty-five");
-
-
-  // $(".depth-indicator").addClass("two-thousand");
-
-
-  // $(".depth-indicator").addClass("fifteen-hundred");
-
-
-  // $(".depth-indicator").addClass("thousand");
-
-
-  // $(".depth-indicator").addClass("five-hundred");

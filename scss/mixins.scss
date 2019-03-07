@@ -7,6 +7,14 @@
   border: $size solid $color;
 }
 
+@mixin bubble($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  box-shadow: 4px 4px 20px black, inset 4px 4px 18px white;
+  border: 1px white solid;
+}
+
 @mixin size($width) {
   width: $width;
   height: auto;
