@@ -81,7 +81,7 @@ img {
 #angler-fish {
   @include size(8em);
   position: relative;
-  top: 27%;
+  top: 83%;
   animation: swim-RL 18s infinite linear;
 }
 
@@ -92,12 +92,11 @@ img {
   left: 25vw;
   animation: bobbing 1s alternate infinite linear;
 }
-
 .depth {
   position: relative;
   left: 20px;
   top: 0px;
-  width: auto;
+  width: 100px;
   z-index: 100;
 }
 
@@ -111,7 +110,6 @@ img {
 
 .depth-indicator {
   position: fixed;
-  left: 20px;
   height: 50vh;
   display: flex;
   flex-flow: row nowrap;
@@ -121,12 +119,12 @@ img {
   font-weight: bold;
   color: white;
   z-index: 200;
+  left: 20px;
   .depth-marker {
     width: 2em;
     height: 2em;
     @include border(5px, red);
     border-radius: 50%;
-    margin-right: .5rem;
   }
   .depth-text {
     font-size: 1.5rem;

@@ -300,7 +300,7 @@ img {
   width: 8em;
   height: auto;
   position: relative;
-  top: 27%;
+  top: 83%;
   animation: swim-RL 18s infinite linear; }
 
 #octopus {
@@ -315,7 +315,7 @@ img {
   position: relative;
   left: 20px;
   top: 0px;
-  width: auto;
+  width: 100px;
   z-index: 100; }
 
 .depth-line {
@@ -328,7 +328,6 @@ img {
 
 .depth-indicator {
   position: fixed;
-  left: 20px;
   height: 50vh;
   display: flex;
   flex-flow: row nowrap;
@@ -337,13 +336,13 @@ img {
   font-family: Helvetica, sans-serif;
   font-weight: bold;
   color: white;
-  z-index: 200; }
+  z-index: 200;
+  left: 20px; }
   .depth-indicator .depth-marker {
     width: 2em;
     height: 2em;
     border: 5px solid red;
-    border-radius: 50%;
-    margin-right: .5rem; }
+    border-radius: 50%; }
   .depth-indicator .depth-text {
     font-size: 1.5rem; }
 
