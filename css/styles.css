@@ -96,8 +96,8 @@ img {
   top: 80%;
   animation: swim-LR 20s infinite linear; }
 
-#shelly {
-  width: 10em;
+#sea-turtle {
+  width: 20em;
   height: auto;
   position: relative;
   top: 20vw;
@@ -185,5 +185,33 @@ img {
   font-family: Helvetica, sans-serif;
   border-radius: 6px 6px 6px 6px;
   cursor: pointer; }
+
+.hundred {
+  position: fixed;
+  transform: translateY(10px); }
+
+.five-hundred {
+  position: fixed;
+  transform: translateY(300px); }
+
+.thousand {
+  position: fixed;
+  transform: translateY(400px); }
+
+.fifteen-hundred {
+  position: fixed;
+  transform: translateY(500px); }
+
+.two-thousand {
+  position: fixed;
+  transform: translateY(600px); }
+
+.twenty-five {
+  position: fixed;
+  transform: translateY(700px); }
+
+.three-thousand {
+  position: fixed;
+  transform: translateY(800px); }
 
 /*# sourceMappingURL=styles.css.map */

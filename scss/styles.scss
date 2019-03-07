@@ -61,8 +61,8 @@ img {
   animation: swim-LR 20s infinite linear;
 }
 
-#shelly {
-  @include size(10em);
+#sea-turtle {
+  @include size(20em);
   position: relative;
   top: 20vw;
   left: 45vw;
@@ -154,4 +154,33 @@ img {
   font-family: $basefont;
   border-radius: $border-radius;
   cursor: pointer;
+}
+
+.hundred {
+  position: fixed;
+transform: translateY(10px);
+}
+.five-hundred {
+  position: fixed;
+transform: translateY(300px);
+}
+.thousand {
+  position: fixed;
+transform: translateY(400px);
+}
+.fifteen-hundred {
+  position: fixed;
+transform: translateY(500px);
+}
+.two-thousand{
+  position: fixed;
+transform: translateY(600px);
+}
+.twenty-five {
+  position: fixed;
+transform: translateY(700px);
+}
+.three-thousand {
+  position: fixed;
+transform: translateY(800px);
 }

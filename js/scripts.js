@@ -14,6 +14,12 @@ $(document).ready(function() {
     $(".info-card").fadeIn(600);
     $("#info-jellyfish").show();
   });
+  });
+  $("#sea-turtle").click(function(){
+    $(".info-card").children().hide()
+    $(".info-card").fadeIn(600);
+    $("#info-sea-turtle").show();
+  });
   $("#octopus").click(function(){
     $(".info-card").children().hide()
     $(".info-card").fadeIn(600);
@@ -61,16 +67,22 @@ $(document).ready(function() {
 
     if ( meters > 2900 ) {
       $(".depth-text").text("3000 m");
+      // $(".depth-indicator").addClass("three-thousand");
     } else if ( meters > 2500 ) {
       $(".depth-text").text("2500 m");
+      // $(".depth-indicator").addClass("twenty-five");
     } else if ( meters > 2100 ) {
       $(".depth-text").text("2000 m");
+      // $(".depth-indicator").addClass("two-thousand");
     } else if ( meters > 1700 ) {
       $(".depth-text").text("1500 m");
+      // $(".depth-indicator").addClass("fifteen-hundred");
     } else if ( meters > 1400 ) {
       $(".depth-text").text("1000 m");
+      // $(".depth-indicator").addClass("thousand");
     } else if ( meters > 1000 ) {
       $(".depth-text").text("500 m");
+      // $(".depth-indicator").addClass("five-hundred");
     } else {
       $(".depth-text").text("100 m");
     }
