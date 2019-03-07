@@ -2,11 +2,9 @@
   padding: $padding;
   margin: $margin;
 }
-
 @mixin border($size, $color) {
   border: $size solid $color;
 }
-
 @mixin bubble($size) {
   width: $size;
   height: $size;
@@ -14,23 +12,18 @@
   box-shadow: 3px 5px 30px #102163, inset 2px 6px 18px white;
   border: 1px white solid;
 }
-
 @mixin size($width) {
   width: $width;
   height: auto;
 }
-
 @mixin min-max-width($min-width, $max-width) {
   min-width: $min-width;
   max-width: $max-width;
 }
-
 @mixin min-max-height($min-height, $max-height) {
   min-height: $min-height;
   max-height: $max-height;
 }
-
-
 @mixin keyframes-animation($name) {
   @-webkit-keyframes #{$name} {
     @content;
@@ -39,12 +32,10 @@
     @content;
   }
 }
-
 @mixin prefix-property($name, $value) {
   -webkit-#{$name}: $value;
   #{$name}: $value;
 }
-
 @mixin swim($start, $end) {
   @include keyframes-animation(swim-LR) {
     0% {
@@ -63,8 +54,32 @@
       @include prefix-property(transform, translateX($start) rotateY(0deg));
     }
   }
-
 }
+
+
+
+@mixin swimming($start, $end) {
+  @include keyframes-animation(swim-RL) {
+    0% {
+      @include prefix-property(transform, translateX($end) rotateY(180deg));
+    }
+    49% {
+      @include prefix-property(transform, translateX($start) rotateY(180deg));
+    }
+    50% {
+      @include prefix-property(transform, translateX($start) rotateY(0deg));
+    }
+    99% {
+      @include prefix-property(transform, translateX($end) rotateY(30deg));
+    }
+    100% {
+      @include prefix-property(transform, translateX($end) rotateY(100deg));
+    }
+  }
+}
+
+
+
 
 @mixin bob {
   @include keyframes-animation (bobbing) {
@@ -76,9 +91,6 @@
     }
   }
 }
-
-
-
 @keyframes fade {
   from {
     opacity: 0;
@@ -87,18 +99,16 @@
     opacity: 1;
   }
 }
-
-
 @keyframes bubbly {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: .8;
-      transform: translateY(-200px);
-    }
-    100% {
-      opacity: .1;
-      transform: translateY(-400px);
-    }
+  0% {
+    opacity: 0;
   }
+  50% {
+    opacity: .7;
+    transform: translateY(-200px);
+  }
+  100% {
+    opacity: .1;
+    transform: translateY(-500px);
+  }
+}

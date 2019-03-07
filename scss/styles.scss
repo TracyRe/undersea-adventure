@@ -13,6 +13,7 @@ body {
   background-repeat: no-repeat;
   height: $sea-depth;
   @include swim(5vw, 70vw);
+  @include swimming(5vw, 70vw);
   @include bob;
 }
 
@@ -37,51 +38,57 @@ img {
   @include size(12em);
   position: relative;
   transform: rotateY(180deg);
-  top: 15%;
+  top: 5.4%;
   animation: swim-LR 50s infinite linear;
 }
 
 #razorfish {
   @include size(6em);
   position: relative;
-  top: 50%;
+  top: 2.7%;
   animation: swim-LR 40s infinite linear;
 }
 
 #puffer {
   @include size(6em);
   position: relative;
-  top: 75%;
+  top: 8%;
   animation: swim-LR 17s infinite linear;
 }
 
 #great-white {
   @include size(40em);
   position: relative;
-  top: 80%;
-  animation: swim-LR 20s infinite linear;
+  top: 27%;
+  animation: swim-RL 20s infinite linear;
 }
 
 #sea-turtle {
   @include size(20em);
   position: relative;
-  top: 20vw;
-  left: 70vw;
-  animation: bobbing 1s alternate infinite linear;
+  top: 5.4%;
+  animation: swim-RL 15s infinite linear;
 }
 
 #jellyfish {
   @include size(8em);
   position: relative;
-  top: 40vw;
+  top: 27%;
   left: 50vw;
   animation: bobbing 1s alternate infinite linear;
+}
+
+#angler-fish {
+  @include size(8em);
+  position: relative;
+  top: 27%;
+  animation: swim-RL 18s infinite linear;
 }
 
 #octopus {
   @include size(40em);
   position: relative;
-  top: 60vw;
+  top: 54%;
   left: 25vw;
   animation: bobbing 1s alternate infinite linear;
 }
@@ -165,10 +172,9 @@ img {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
-  z-index: 1;
   width: 100%;
   height: 100%;
   p {
     opacity: 0;
-  }
+    }
   }

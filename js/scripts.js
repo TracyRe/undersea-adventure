@@ -1,8 +1,5 @@
 $(document).ready(function() {
-
-
   var scroll = $(document).height();
-  console.log(scroll);
 
   $("#big-eye-tuna").click(function(){
     $(".info-card").children().hide();
@@ -14,7 +11,6 @@ $(document).ready(function() {
     $(".info-card").fadeIn(600);
     $("#info-jellyfish").show();
   });
-
   $("#sea-turtle").click(function(){
     $(".info-card").children().hide();
     $(".info-card").fadeIn(600);
@@ -35,6 +31,11 @@ $(document).ready(function() {
     $(".info-card").fadeIn(600);
     $("#info-razorfish").show();
   });
+  $("#angler-fish").click(function(){
+    $(".info-card").children().hide();
+    $(".info-card").fadeIn(600);
+    $("#info-angler-fish").show();
+  });
   $("#great-white").click(function(){
     $(".info-card").children().hide();
     $(".info-card").fadeIn(600);
@@ -44,10 +45,8 @@ $(document).ready(function() {
     $(".info-card").fadeOut(800);
   });
 
-
   // init controller
   var controller = new ScrollMagic.Controller();
-
   // build scene
   var scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: scroll })
   .addTo(controller)
@@ -64,7 +63,6 @@ $(document).ready(function() {
   .on("progress", function (e) {
     var meters = (e.progress.toFixed(3) * 3688).toFixed(0);
 
-
     if ( meters > 2900 ) {
       $(".depth-text").text("3000 m");
     } else if ( meters > 2500 ) {
@@ -80,7 +78,5 @@ $(document).ready(function() {
     } else {
       $(".depth-text").text("100 m");
     }
-
   });
-
-  });
+});
