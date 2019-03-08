@@ -1,322 +1,405 @@
 @keyframes sea-through {
   from {
-    opacity: 0; }
+    opacity: 0;
+  }
   to {
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 @keyframes fade {
   from {
-    opacity: 0; }
+    opacity: 0;
+  }
   to {
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 @keyframes bubbly {
   0% {
-    opacity: 0; }
+    opacity: 0;
+  }
   50% {
-    opacity: .7;
-    transform: translateY(-200px); }
+    opacity: 0.7;
+    transform: translateY(-200px);
+  }
   100% {
-    opacity: .1;
-    transform: translateY(-500px); } }
+    opacity: 0.1;
+    transform: translateY(-500px);
+  }
+}
 @keyframes wobble {
   0% {
-    transform: rotateZ(0deg); }
+    transform: rotateZ(0deg);
+  }
   25% {
-    transform: rotateZ(10deg); }
+    transform: rotateZ(10deg);
+  }
   50% {
-    transform: rotateZ(0deg); }
+    transform: rotateZ(0deg);
+  }
   75% {
-    transform: rotateZ(-10deg); }
+    transform: rotateZ(-10deg);
+  }
   100% {
-    transform: rotateZ(0deg); } }
+    transform: rotateZ(0deg);
+  }
+}
 @keyframes scaling {
   from {
-    transform: scale(0); }
+    transform: scale(0);
+  }
   to {
-    transform: scale(1); } }
+    transform: scale(1);
+  }
+}
 @keyframes waving {
   0% {
-    transform: translateY(0px); }
+    transform: translateY(0px);
+  }
   25% {
-    transform: translateY(20px); }
+    transform: translateY(20px);
+  }
   50% {
-    transform: translateY(0px); }
+    transform: translateY(0px);
+  }
   75% {
-    transform: translateY(-20px); }
+    transform: translateY(-20px);
+  }
   100% {
-    transform: translateY(0px); } }
+    transform: translateY(0px);
+  }
+}
 #bubble-1 {
-  grid-area: 10/ 4;
+  grid-area: 10/4;
   width: 2em;
   height: 2em;
   border-radius: 50%;
   box-shadow: 3px 5px 30px #102163, inset 2px 6px 18px white;
   border: 1px white solid;
-  animation: bubbly 10s 2s linear infinite; }
+  animation: bubbly 10s 2s linear infinite;
+}
 
 #bubble-2 {
-  grid-area: 10 / 7;
+  grid-area: 10/7;
   width: 3em;
   height: 3em;
   border-radius: 50%;
   box-shadow: 3px 5px 30px #102163, inset 2px 6px 18px white;
   border: 1px white solid;
-  animation: bubbly 8s 3s linear infinite; }
+  animation: bubbly 8s 3s linear infinite;
+}
 
 #bubble-3 {
-  grid-area: 10 / 8;
+  grid-area: 10/8;
   width: 5em;
   height: 5em;
   border-radius: 50%;
   box-shadow: 3px 5px 30px #102163, inset 2px 6px 18px white;
   border: 1px white solid;
-  animation: bubbly 8s 1s linear infinite; }
+  animation: bubbly 8s 1s linear infinite;
+}
 
 #bubble-4 {
-  grid-area: 10 / 2;
+  grid-area: 10/2;
   width: 1em;
   height: 1em;
   border-radius: 50%;
   box-shadow: 3px 5px 30px #102163, inset 2px 6px 18px white;
   border: 1px white solid;
-  animation: bubbly 13s 1s linear infinite; }
+  animation: bubbly 13s 1s linear infinite;
+}
 
 #bubble-5 {
-  grid-area: 9 / 7;
+  grid-area: 9/7;
   width: 1em;
   height: 1em;
   border-radius: 50%;
   box-shadow: 3px 5px 30px #102163, inset 2px 6px 18px white;
   border: 1px white solid;
-  animation: bubbly 11s linear infinite; }
+  animation: bubbly 11s linear infinite;
+}
 
 #bubble-6 {
-  grid-area: 8 / 5;
+  grid-area: 8/5;
   width: 3em;
   height: 3em;
   border-radius: 50%;
   box-shadow: 3px 5px 30px #102163, inset 2px 6px 18px white;
   border: 1px white solid;
-  animation: bubbly 12s linear infinite; }
+  animation: bubbly 12s linear infinite;
+}
 
 #bubble-7 {
-  grid-area: 8 / 8;
+  grid-area: 8/8;
   width: 2em;
   height: 2em;
   border-radius: 50%;
   box-shadow: 3px 5px 30px #102163, inset 2px 6px 18px white;
   border: 1px white solid;
-  animation: bubbly 8s 3s linear infinite; }
+  animation: bubbly 8s 3s linear infinite;
+}
 
 #bubble-8 {
-  grid-area: 7 / 6;
+  grid-area: 7/6;
   width: 1em;
   height: 1em;
   border-radius: 50%;
   box-shadow: 3px 5px 30px #102163, inset 2px 6px 18px white;
   border: 1px white solid;
-  animation: bubbly 8s 1s linear infinite; }
+  animation: bubbly 8s 1s linear infinite;
+}
 
 #bubble-9 {
-  grid-area: 7 / 2;
+  grid-area: 7/2;
   width: 4em;
   height: 4em;
   border-radius: 50%;
   box-shadow: 3px 5px 30px #102163, inset 2px 6px 18px white;
   border: 1px white solid;
-  animation: bubbly 8s 2s linear infinite; }
+  animation: bubbly 8s 2s linear infinite;
+}
 
 #bubble-10 {
-  grid-area: 6 / 9;
+  grid-area: 6/9;
   width: 4em;
   height: 4em;
   border-radius: 50%;
   box-shadow: 3px 5px 30px #102163, inset 2px 6px 18px white;
   border: 1px white solid;
-  animation: bubbly 8s 4s linear infinite; }
+  animation: bubbly 8s 4s linear infinite;
+}
 
 #bubble-11 {
-  grid-area: 6 / 4;
+  grid-area: 6/4;
   width: 2em;
   height: 2em;
   border-radius: 50%;
   box-shadow: 3px 5px 30px #102163, inset 2px 6px 18px white;
   border: 1px white solid;
-  animation: bubbly 8s 2s linear infinite; }
+  animation: bubbly 8s 2s linear infinite;
+}
 
 #bubble-12 {
-  grid-area: 5 / 3;
+  grid-area: 5/3;
   width: 1em;
   height: 1em;
   border-radius: 50%;
   box-shadow: 3px 5px 30px #102163, inset 2px 6px 18px white;
   border: 1px white solid;
-  animation: bubbly 8s 1s linear infinite; }
+  animation: bubbly 8s 1s linear infinite;
+}
 
 #bubble-13 {
-  grid-area: 6 / 6;
+  grid-area: 6/6;
   width: 4em;
   height: 4em;
   border-radius: 50%;
   box-shadow: 3px 5px 30px #102163, inset 2px 6px 18px white;
   border: 1px white solid;
-  animation: bubbly 8s 3s linear infinite; }
+  animation: bubbly 8s 3s linear infinite;
+}
 
 #bubble-14 {
-  grid-area: 5 / 8;
+  grid-area: 5/8;
   width: 3em;
   height: 3em;
   border-radius: 50%;
   box-shadow: 3px 5px 30px #102163, inset 2px 6px 18px white;
   border: 1px white solid;
-  animation: bubbly 8s linear infinite; }
+  animation: bubbly 8s linear infinite;
+}
 
 #bubble-15 {
-  grid-area: 9 / 10;
+  grid-area: 9/10;
   width: 2em;
   height: 2em;
   border-radius: 50%;
   box-shadow: 3px 5px 30px #102163, inset 2px 6px 18px white;
   border: 1px white solid;
-  animation: bubbly 8s 2s linear infinite; }
+  animation: bubbly 8s 2s linear infinite;
+}
 
 #bubble-16 {
-  grid-area: 5 / 9;
+  grid-area: 5/9;
   width: 3em;
   height: 3em;
   border-radius: 50%;
   box-shadow: 3px 5px 30px #102163, inset 2px 6px 18px white;
   border: 1px white solid;
-  animation: bubbly 8s 1s linear infinite; }
+  animation: bubbly 8s 1s linear infinite;
+}
 
 * {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
 body {
   background-image: linear-gradient(#b5e8ff, #001c2b);
   background-repeat: no-repeat;
-  height: 1000%; }
+  height: 1000%;
+}
 @-webkit-keyframes swim-LR {
   0% {
     -webkit-transform: translateX(5vw) rotateY(0deg);
-    transform: translateX(5vw) rotateY(0deg); }
+    transform: translateX(5vw) rotateY(0deg);
+  }
   49% {
     -webkit-transform: translateX(70vw) rotateY(0deg);
-    transform: translateX(70vw) rotateY(0deg); }
+    transform: translateX(70vw) rotateY(0deg);
+  }
   50% {
     -webkit-transform: translateX(70vw) rotateY(180deg);
-    transform: translateX(70vw) rotateY(180deg); }
+    transform: translateX(70vw) rotateY(180deg);
+  }
   99% {
     -webkit-transform: translateX(5vw) rotateY(180deg);
-    transform: translateX(5vw) rotateY(180deg); }
+    transform: translateX(5vw) rotateY(180deg);
+  }
   100% {
     -webkit-transform: translateX(5vw) rotateY(0deg);
-    transform: translateX(5vw) rotateY(0deg); } }
+    transform: translateX(5vw) rotateY(0deg);
+  }
+}
 @keyframes swim-LR {
   0% {
     -webkit-transform: translateX(5vw) rotateY(0deg);
-    transform: translateX(5vw) rotateY(0deg); }
+    transform: translateX(5vw) rotateY(0deg);
+  }
   49% {
     -webkit-transform: translateX(70vw) rotateY(0deg);
-    transform: translateX(70vw) rotateY(0deg); }
+    transform: translateX(70vw) rotateY(0deg);
+  }
   50% {
     -webkit-transform: translateX(70vw) rotateY(180deg);
-    transform: translateX(70vw) rotateY(180deg); }
+    transform: translateX(70vw) rotateY(180deg);
+  }
   99% {
     -webkit-transform: translateX(5vw) rotateY(180deg);
-    transform: translateX(5vw) rotateY(180deg); }
+    transform: translateX(5vw) rotateY(180deg);
+  }
   100% {
     -webkit-transform: translateX(5vw) rotateY(0deg);
-    transform: translateX(5vw) rotateY(0deg); } }
+    transform: translateX(5vw) rotateY(0deg);
+  }
+}
 @-webkit-keyframes swim-RL {
   0% {
     -webkit-transform: translateX(70vw) rotateY(180deg);
-    transform: translateX(70vw) rotateY(180deg); }
+    transform: translateX(70vw) rotateY(180deg);
+  }
   49% {
     -webkit-transform: translateX(5vw) rotateY(180deg);
-    transform: translateX(5vw) rotateY(180deg); }
+    transform: translateX(5vw) rotateY(180deg);
+  }
   50% {
     -webkit-transform: translateX(5vw) rotateY(0deg);
-    transform: translateX(5vw) rotateY(0deg); }
+    transform: translateX(5vw) rotateY(0deg);
+  }
   99% {
     -webkit-transform: translateX(70vw) rotateY(30deg);
-    transform: translateX(70vw) rotateY(30deg); }
+    transform: translateX(70vw) rotateY(30deg);
+  }
   100% {
     -webkit-transform: translateX(70vw) rotateY(100deg);
-    transform: translateX(70vw) rotateY(100deg); } }
+    transform: translateX(70vw) rotateY(100deg);
+  }
+}
 @keyframes swim-RL {
   0% {
     -webkit-transform: translateX(70vw) rotateY(180deg);
-    transform: translateX(70vw) rotateY(180deg); }
+    transform: translateX(70vw) rotateY(180deg);
+  }
   49% {
     -webkit-transform: translateX(5vw) rotateY(180deg);
-    transform: translateX(5vw) rotateY(180deg); }
+    transform: translateX(5vw) rotateY(180deg);
+  }
   50% {
     -webkit-transform: translateX(5vw) rotateY(0deg);
-    transform: translateX(5vw) rotateY(0deg); }
+    transform: translateX(5vw) rotateY(0deg);
+  }
   99% {
     -webkit-transform: translateX(70vw) rotateY(30deg);
-    transform: translateX(70vw) rotateY(30deg); }
+    transform: translateX(70vw) rotateY(30deg);
+  }
   100% {
     -webkit-transform: translateX(70vw) rotateY(100deg);
-    transform: translateX(70vw) rotateY(100deg); } }
+    transform: translateX(70vw) rotateY(100deg);
+  }
+}
 @-webkit-keyframes bobbing {
   from {
-    transform: translateY(20px); }
+    transform: translateY(20px);
+  }
   to {
-    transform: translateY(-20px); } }
+    transform: translateY(-20px);
+  }
+}
 @keyframes bobbing {
   from {
-    transform: translateY(20px); }
+    transform: translateY(20px);
+  }
   to {
-    transform: translateY(-20px); } }
+    transform: translateY(-20px);
+  }
+}
+
 .container {
   background-image: url(../img/bg-ocean-floor.png);
   background-attachment: absolute;
   background-position: bottom;
   background-repeat: repeat-x;
-  height: 365vh; }
+  height: 365vh;
+}
 
 h1, h2 {
-  margin-bottom: .5rem; }
+  margin-bottom: 0.5rem;
+}
 
 p {
   font-family: Helvetica, sans-serif;
   line-height: 140%;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+}
 
 p:last-child {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 img {
   width: 100%;
-  height: auto; }
+  height: auto;
+}
 
 .header {
   position: absolute;
   display: flex;
   flex-flow: column nowrap;
-  width: 100%; }
-  .header h1 {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    font-family: "Princess Sofia", cursive;
-    font-size: 10rem;
-    color: yellow;
-    text-align: center;
-    text-shadow: 4px 4px 8px rgba(1, 30, 76, 0.5); }
-  .header .intro {
-    background: white;
-    opacity: .4;
-    padding: 0.7rem 2rem;
-    margin: 0 auto 1rem auto;
-    animation: wobble .6s linear;
-    animation-iteration-count: 2; }
-    .header .intro p {
-      animation: scaling 1.2s linear;
-      font-size: 1.2rem;
-      text-align: center; }
+  width: 100%;
+}
+.header h1 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  font-family: "Princess Sofia", cursive;
+  font-size: 10rem;
+  color: yellow;
+  text-align: center;
+  text-shadow: 4px 4px 8px rgba(1, 30, 76, 0.5);
+}
+.header .intro {
+  background: white;
+  opacity: 0.4;
+  padding: 0.7rem 2rem;
+  margin: 0 auto 1rem auto;
+  animation: wobble 0.6s linear;
+  animation-iteration-count: 2;
+}
+.header .intro p {
+  animation: scaling 1.2s linear;
+  font-size: 1.2rem;
+  text-align: center;
+}
 
 #big-eye-tuna {
   width: 12em;
@@ -324,35 +407,40 @@ img {
   position: relative;
   transform: rotateY(180deg);
   top: 5.4%;
-  animation: swim-LR 50s infinite linear, sea-through 2s linear; }
+  animation: swim-LR 50s infinite linear, sea-through 2s linear;
+}
 
 #razorfish {
   width: 6em;
   height: auto;
   position: relative;
   top: 2.7%;
-  animation: swim-LR 40s infinite linear, sea-through 2s linear; }
+  animation: swim-LR 40s infinite linear, sea-through 2s linear;
+}
 
 #puffer {
   width: 6em;
   height: auto;
   position: relative;
   top: 8%;
-  animation: swim-LR 23s infinite linear, sea-through 2s linear; }
+  animation: swim-LR 23s infinite linear, sea-through 2s linear;
+}
 
 #great-white {
   width: 40em;
   height: auto;
   position: relative;
   top: 27%;
-  animation: swim-RL 20s infinite linear, sea-through 2s linear; }
+  animation: swim-RL 20s infinite linear, sea-through 2s linear;
+}
 
 #sea-turtle {
   width: 20em;
   height: auto;
   position: relative;
   top: 5.4%;
-  animation: swim-RL 15s infinite linear, sea-through 2s linear; }
+  animation: swim-RL 15s infinite linear, sea-through 2s linear;
+}
 
 #jellyfish {
   width: 8em;
@@ -360,14 +448,16 @@ img {
   position: relative;
   top: 27%;
   left: 50vw;
-  animation: bobbing 1s alternate infinite linear, sea-through 2s linear; }
+  animation: bobbing 1s alternate infinite linear, sea-through 2s linear;
+}
 
 #angler-fish {
   width: 8em;
   height: auto;
   position: relative;
   top: 79%;
-  animation: swim-RL 18s infinite linear, sea-through 2s linear; }
+  animation: swim-RL 18s infinite linear, sea-through 2s linear;
+}
 
 #octopus {
   width: 40em;
@@ -375,14 +465,16 @@ img {
   position: relative;
   top: 54%;
   left: 25vw;
-  animation: bobbing 1s alternate infinite linear, sea-through 2s linear; }
+  animation: bobbing 1s alternate infinite linear, sea-through 2s linear;
+}
 
 .depth {
   position: relative;
   left: 20px;
   top: 0px;
   width: 100px;
-  z-index: 100; }
+  z-index: 100;
+}
 
 .depth-line {
   width: 5px;
@@ -390,7 +482,8 @@ img {
   height: 365vh;
   background-image: linear-gradient(black, white);
   position: absolute;
-  left: 20px; }
+  left: 20px;
+}
 
 .depth-indicator {
   position: fixed;
@@ -403,21 +496,26 @@ img {
   font-weight: bold;
   color: white;
   z-index: 200;
-  left: 20px; }
-  .depth-indicator .depth-marker {
-    width: 2em;
-    height: 2em;
-    border: 5px solid red;
-    border-radius: 50%; }
-  .depth-indicator .depth-text {
-    font-size: 1.5rem;
-    margin-left: .5rem; }
+  left: 20px;
+}
+.depth-indicator .depth-marker {
+  width: 2em;
+  height: 2em;
+  border: 5px solid red;
+  border-radius: 50%;
+}
+.depth-indicator .depth-text {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
 
 .sea-creature {
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .fish-info {
-  display: none; }
+  display: none;
+}
 
 .info-card-container {
   min-height: 100px;
@@ -426,7 +524,8 @@ img {
   margin: 1rem;
   display: block;
   width: 350px;
-  z-index: 1000; }
+  z-index: 1000;
+}
 
 .info-card {
   min-height: 100px;
@@ -439,7 +538,8 @@ img {
   width: 350px;
   font-family: Helvetica, sans-serif;
   border-radius: 6px 6px 6px 6px;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .bubbles-container {
   position: fixed;
@@ -449,59 +549,78 @@ img {
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
   width: 100%;
-  height: 100%; }
-  .bubbles-container p {
-    opacity: 0; }
+  height: 100%;
+}
+.bubbles-container p {
+  opacity: 0;
+}
 
 #u1 {
-  animation: waving 3s infinite linear; }
+  animation: waving 3s infinite linear;
+}
 
 #n1 {
-  animation: waving 3s .5s infinite linear; }
+  animation: waving 3s 0.25s infinite linear;
+}
 
 #d1 {
-  animation: waving 3s 1s infinite linear; }
+  animation: waving 3s 0.5s infinite linear;
+}
 
 #e1 {
-  animation: waving 3s 1.5s infinite linear; }
+  animation: waving 3s 0.75s infinite linear;
+}
 
 #r1 {
-  animation: waving 3s 2s infinite linear; }
+  animation: waving 3s 1s infinite linear;
+}
 
 #s {
-  animation: waving 3s 2.5s infinite linear; }
+  animation: waving 3s 1.25s infinite linear;
+}
 
 #e2 {
-  animation: waving 3s 3s infinite linear; }
+  animation: waving 3s 1.5s infinite linear;
+}
 
 #a2 {
-  animation: waving 3s 3.5s infinite linear; }
+  animation: waving 3s 1.75s infinite linear;
+}
 
 #a3 {
-  animation: waving 3s 4s infinite linear; }
+  animation: waving 3s 2s infinite linear;
+}
 
 #d2 {
-  animation: waving 3s 4.5s infinite linear; }
+  animation: waving 3s 2.25s infinite linear;
+}
 
 #v {
-  animation: waving 3s 5s infinite linear; }
+  animation: waving 3s 2.5s infinite linear;
+}
 
 #e3 {
-  animation: waving 3s 5.5s infinite linear; }
+  animation: waving 3s 2.75s infinite linear;
+}
 
 #n2 {
-  animation: waving 3s 6s infinite linear; }
+  animation: waving 3s 3s infinite linear;
+}
 
 #t {
-  animation: waving 3s 6.5s infinite linear; }
+  animation: waving 3s 3.25s infinite linear;
+}
 
 #u2 {
-  animation: waving 3s 7s infinite linear; }
+  animation: waving 3s 3.5s infinite linear;
+}
 
 #r2 {
-  animation: waving 3s 7.5s infinite linear; }
+  animation: waving 3s 3.75s infinite linear;
+}
 
 #e4 {
-  animation: waving 3s 8s infinite linear; }
+  animation: waving 3s 4s infinite linear;
+}
 
 /*# sourceMappingURL=styles.css.map */
