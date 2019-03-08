@@ -195,7 +195,7 @@
 body {
   background-image: linear-gradient(#b5e8ff, #001c2b);
   background-repeat: no-repeat;
-  height: 365vh; }
+  height: 1000%; }
 @-webkit-keyframes swim-LR {
   0% {
     -webkit-transform: translateX(5vw) rotateY(0deg);

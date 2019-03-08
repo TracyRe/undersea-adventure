@@ -11,7 +11,7 @@ body {
   // width: 100%;
   background-image: linear-gradient($top-water, $bottom-water);
   background-repeat: no-repeat;
-  height: $sea-depth;
+  height: 1000%;
   @include swim(5vw, 70vw);
   @include swimming(5vw, 70vw);
   @include bob;
