@@ -70,7 +70,7 @@ img {
   text-align: center;
   animation: wobble .2s linear;
   animation-iteration-count: 4;
-  width: 500px;
+  width: 450px;
   @include cushion(0, 0 auto 1rem auto);
 }
 .intro {
@@ -78,6 +78,7 @@ img {
   animation: scaling .8s linear;
   background: white;
   opacity: .4;
+  box-shadow: $box-shadow;
 }
 
 
