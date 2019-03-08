@@ -15,6 +15,7 @@ body {
   @include swim(5vw, 70vw);
   @include swimming(5vw, 70vw);
   @include bob;
+  // @include title-wave;
 }
 
 .container {
@@ -45,9 +46,12 @@ img {
 .header {
   position: absolute;
   display: flex;
-  flex-flow: column;
+  flex-flow: column nowrap;
   width: 100%;
   h1 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
     font: {
       family: $headline-font;
       size: 10rem;
@@ -55,6 +59,7 @@ img {
     color: yellow;
     text-align: center;
     text-shadow: $box-shadow;
+
   }
   .intro {
     background: white;
@@ -214,3 +219,55 @@ img {
     opacity: 0;
     }
   }
+
+#u1 {
+  animation: waving 3s infinite linear;
+}
+#n1 {
+  animation: waving 3s .5s infinite linear;
+}
+#d1 {
+  animation: waving 3s 1s infinite linear;
+}
+#e1 {
+  animation: waving 3s 1.5s infinite linear;
+}
+#r1 {
+  animation: waving 3s 2s infinite linear;
+}
+#s {
+  animation: waving 3s 2.5s infinite linear;
+}
+#e2 {
+  animation: waving 3s 3s infinite linear;
+}
+#a2 {
+  animation: waving 3s 3.5s infinite linear;
+}
+#a3 {
+  animation: waving 3s 4s infinite linear;
+}
+#d2 {
+  animation: waving 3s 4.5s infinite linear;
+}
+#v {
+  animation: waving 3s 5s infinite linear;
+}
+#e3 {
+  animation: waving 3s 5.5s infinite linear;
+}
+#n2 {
+  animation: waving 3s 6s infinite linear;
+}
+#t {
+  animation: waving 3s 6.5s infinite linear;
+}
+#u2 {
+  animation: waving 3s 7s infinite linear;
+}
+#r2 {
+  animation: waving 3s 7.5s infinite linear;
+}
+#e4 {
+  animation: waving 3s 8s infinite linear;
+}

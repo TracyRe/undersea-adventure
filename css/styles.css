@@ -33,6 +33,17 @@
     transform: scale(0); }
   to {
     transform: scale(1); } }
+@keyframes waving {
+  0% {
+    transform: translateY(0px); }
+  25% {
+    transform: translateY(20px); }
+  50% {
+    transform: translateY(0px); }
+  75% {
+    transform: translateY(-20px); }
+  100% {
+    transform: translateY(0px); } }
 #bubble-1 {
   grid-area: 10/ 4;
   width: 2em;
@@ -284,9 +295,12 @@ img {
 .header {
   position: absolute;
   display: flex;
-  flex-flow: column;
+  flex-flow: column nowrap;
   width: 100%; }
   .header h1 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
     font-family: "Princess Sofia", cursive;
     font-size: 10rem;
     color: yellow;
@@ -438,5 +452,56 @@ img {
   height: 100%; }
   .bubbles-container p {
     opacity: 0; }
+
+#u1 {
+  animation: waving 3s infinite linear; }
+
+#n1 {
+  animation: waving 3s .5s infinite linear; }
+
+#d1 {
+  animation: waving 3s 1s infinite linear; }
+
+#e1 {
+  animation: waving 3s 1.5s infinite linear; }
+
+#r1 {
+  animation: waving 3s 2s infinite linear; }
+
+#s {
+  animation: waving 3s 2.5s infinite linear; }
+
+#e2 {
+  animation: waving 3s 3s infinite linear; }
+
+#a2 {
+  animation: waving 3s 3.5s infinite linear; }
+
+#a3 {
+  animation: waving 3s 4s infinite linear; }
+
+#d2 {
+  animation: waving 3s 4.5s infinite linear; }
+
+#v {
+  animation: waving 3s 5s infinite linear; }
+
+#e3 {
+  animation: waving 3s 5.5s infinite linear; }
+
+#n2 {
+  animation: waving 3s 6s infinite linear; }
+
+#t {
+  animation: waving 3s 6.5s infinite linear; }
+
+#u2 {
+  animation: waving 3s 7s infinite linear; }
+
+#r2 {
+  animation: waving 3s 7.5s infinite linear; }
+
+#e4 {
+  animation: waving 3s 8s infinite linear; }
 
 /*# sourceMappingURL=styles.css.map */
