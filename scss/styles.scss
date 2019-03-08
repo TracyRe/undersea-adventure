@@ -61,18 +61,23 @@ img {
     text-shadow: $box-shadow;
 
   }
-  .intro {
-    background: white;
-    opacity: .4;
-    @include cushion(.7rem 2rem, 0 auto 1rem auto);
-    animation: wobble .6s linear;
-    animation-iteration-count: 2;
-    p {
-      animation: scaling 1.2s linear;
-      font-size: 1.2rem;
-      text-align: center;
-    }
-  }
+
+}
+
+
+.scale-intro {
+  font-size: 1.2rem;
+  text-align: center;
+  animation: wobble .2s linear;
+  animation-iteration-count: 4;
+  width: 500px;
+  @include cushion(0, 0 auto 1rem auto);
+}
+.intro {
+  @include cushion(.7rem 2rem, 0);
+  animation: scaling .8s linear;
+  background: white;
+  opacity: .4;
 }
 
 
