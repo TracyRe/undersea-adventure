@@ -35,8 +35,8 @@ CSS animation with Jquery.
 
 ## Setup/Installation Requirements
 
-* https://tracyre.github.io/undersea-adventure/
-* https://github.com/TracyRe/undersea-adventure.git
+* View at https://tracyre.github.io/undersea-adventure/
+* Clone or download from https://github.com/TracyRe/undersea-adventure.git
 * Open in browser of your choice
 * Edit files as desired
 
