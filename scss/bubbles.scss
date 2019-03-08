@@ -1,0 +1,80 @@
+#bubble-1 {
+  grid-area: 10/ 4;
+  @include bubble(2em);
+  animation: bubbly 10s 2s linear infinite;
+}
+#bubble-2 {
+  grid-area: 10 / 7;
+  @include bubble(3em);
+  animation: bubbly 8s 3s linear infinite;
+}
+#bubble-3 {
+  grid-area: 10 / 8;
+  @include bubble(5em);
+  animation: bubbly 8s 1s linear infinite;
+}
+#bubble-4 {
+  grid-area: 10 / 2;
+  @include bubble(1em);
+  animation: bubbly 13s 1s linear infinite;
+}
+#bubble-5 {
+  grid-area: 9 / 7;
+  @include bubble(1em);
+  animation: bubbly 11s linear infinite;
+}
+#bubble-6 {
+  grid-area: 8 / 5;
+  @include bubble(3em);
+  animation: bubbly 12s linear infinite;
+}
+#bubble-7 {
+  grid-area: 8 / 8;
+  @include bubble(2em);
+  animation: bubbly 8s 3s linear infinite;
+}
+#bubble-8 {
+  grid-area: 7 / 6;
+  @include bubble(1em);
+  animation: bubbly 8s 1s linear infinite;
+}
+#bubble-9 {
+  grid-area: 7 / 2;
+  @include bubble(4em);
+  animation: bubbly 8s 2s linear infinite;
+}
+#bubble-10 {
+  grid-area: 6 / 9;
+  @include bubble(4em);
+  animation: bubbly 8s 4s linear infinite;
+}
+#bubble-11 {
+  grid-area: 6 / 4;
+  @include bubble(2em);
+  animation: bubbly 8s 2s linear infinite;
+}
+#bubble-12 {
+  grid-area: 5 / 3;
+  @include bubble(1em);
+  animation: bubbly 8s 1s linear infinite;
+}
+#bubble-13 {
+  grid-area: 6 / 6;
+  @include bubble(4em);
+  animation: bubbly 8s 3s linear infinite;
+}
+#bubble-14 {
+  grid-area: 5 / 8;
+  @include bubble(3em);
+  animation: bubbly 8s linear infinite;
+}
+#bubble-15 {
+  grid-area: 9 / 10;
+  @include bubble(2em);
+  animation: bubbly 8s 2s linear infinite;
+}
+#bubble-16 {
+  grid-area: 5 / 9;
+  @include bubble(3em);
+  animation: bubbly 8s 1s linear infinite;
+}

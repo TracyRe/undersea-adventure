@@ -1,0 +1,192 @@
+@mixin cushion ($padding, $margin){
+  padding: $padding;
+  margin: $margin;
+}
+@mixin border($size, $color) {
+  border: $size solid $color;
+}
+@mixin bubble($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  box-shadow: 3px 5px 30px #102163, inset 2px 6px 18px white;
+  border: 1px white solid;
+}
+@mixin size($width) {
+  width: $width;
+  height: auto;
+}
+@mixin min-max-width($min-width, $max-width) {
+  min-width: $min-width;
+  max-width: $max-width;
+}
+@mixin min-max-height($min-height, $max-height) {
+  min-height: $min-height;
+  max-height: $max-height;
+}
+@mixin keyframes-animation($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+@mixin prefix-property($name, $value) {
+  -webkit-#{$name}: $value;
+  #{$name}: $value;
+}
+@mixin swim($start, $end) {
+  @include keyframes-animation(swim-LR) {
+    0% {
+      @include prefix-property(transform, translateX($start) rotateY(0deg));
+    }
+    49% {
+      @include prefix-property(transform, translateX($end) rotateY(0deg));
+    }
+    50% {
+      @include prefix-property(transform, translateX($end) rotateY(180deg));
+    }
+    99% {
+      @include prefix-property(transform, translateX($start) rotateY(180deg));
+    }
+    100% {
+      @include prefix-property(transform, translateX($start) rotateY(0deg));
+    }
+  }
+}
+
+@keyframes sea-through {
+from {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
+}
+
+
+
+@mixin swimming($start, $end) {
+  @include keyframes-animation(swim-RL) {
+    0% {
+      @include prefix-property(transform, translateX($end) rotateY(180deg));
+    }
+    49% {
+      @include prefix-property(transform, translateX($start) rotateY(180deg));
+    }
+    50% {
+      @include prefix-property(transform, translateX($start) rotateY(0deg));
+    }
+    99% {
+      @include prefix-property(transform, translateX($end) rotateY(30deg));
+    }
+    100% {
+      @include prefix-property(transform, translateX($end) rotateY(100deg));
+    }
+  }
+}
+
+
+
+
+@mixin bob {
+  @include keyframes-animation (bobbing) {
+    from {
+      transform: translateY(20px);
+    }
+    to {
+      transform: translateY(-20px);
+    }
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes bubbly {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .7;
+    transform: translateY(-200px);
+  }
+  100% {
+    opacity: .1;
+    transform: translateY(-500px);
+  }
+}
+
+@keyframes wobble {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(10deg);
+  }
+  50% {
+    transform: rotateZ(0deg);
+  }
+  75% {
+    transform: rotateZ(-10deg);
+  }
+  100%{
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes scaling {
+  from{
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+
+}
+
+
+@keyframes waving {
+    0% {
+      transform: translateY(0px);
+    }
+    25% {
+      transform: translateY(20px);
+    }
+    50% {
+      transform: translateY(0px);
+    }
+    75% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+
+
+// @mixin title-wave {
+//   @include keyframes-animation (waving) {
+//     0% {
+//       transform: translateY(0px);
+//     }
+//     25% {
+//       transform: translateY(10px);
+//     }
+//     50% {
+//       transform: translateY(0px);
+//     }
+//     75% {
+//       transform: translateY(-10px);
+//     }
+//     100% {
+//       transform: translateY(0px);
+//     }
+//   }
+// }
